@@ -349,12 +349,12 @@ if __name__ == "__main__":
 
     parser = argparse.ArgumentParser(description="Launch the local faiss retriever.")
     parser.add_argument(
-        "--index_path", type=str, default="/local/user/mnt/index/wiki-18/e5_Flat.index", help="Corpus indexing file."
+        "--index_path", type=str, default="/workspace/historical/mnt/index/wiki-18/e5_Flat.index", help="Corpus indexing file."
     )
     parser.add_argument(
         "--corpus_path",
         type=str,
-        default="/local/user/mnt/data/retrieval-corpus/wiki-18.jsonl",
+        default="/workspace/historical/mnt/data/retrieval-corpus/wiki-18.jsonl",
         help="Local corpus file.",
     )
     parser.add_argument("--topk", type=int, default=3, help="Number of retrieved passages for one query.")

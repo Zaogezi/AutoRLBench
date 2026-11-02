@@ -1,0 +1,765 @@
+{
+  "reason": "Unrelated upstream contribution policy, serving/SFT tooling and test utilities",
+  "removed": [
+    {
+      "path": "idea_source/tests/cleanup_awm_mcp.py",
+      "sha256": "99ed9c04e16349abd5c98670f535a1496f9d2b5216f3cdc83989666c799d1571"
+    },
+    {
+      "path": "idea_source/tests/kill_github_tests.sh",
+      "sha256": "53e1e9cf1f9a695096828fcd374ce619e9527336720ebe3f7f1a521cd5335a09"
+    },
+    {
+      "path": "idea_source/tests/test_awm_mcp_tool_error_returns.py",
+      "sha256": "aebd0ca48c03f5e6684bfd84aee33d04a8c6e19f13e3ffbdd19217a0cf38b76e"
+    },
+    {
+      "path": "idea_source/tests/test_awm_projection.py",
+      "sha256": "b27fb63f2fbff4d99e966a273d68b05a2c18c65813320d70f8feb5225727ac75"
+    },
+    {
+      "path": "idea_source/tests/test_awm_sql_judge_from_rollouts.py",
+      "sha256": "7ce36d848e84ae2f705ee4b9d15bae72c0a681ee0847c9cb4dfdf23078ec11d7"
+    },
+    {
+      "path": "idea_source/tests/test_awm_three_services_multiturn.py",
+      "sha256": "c03454731a5ed425dd928f05eaed0226b53d30a1619d8ed9d89edad277ee7dcc"
+    },
+    {
+      "path": "idea_source/tests/test_glm_model.py",
+      "sha256": "7cdc580b41534512ea2d3eeb47f354755cb62b01d41406276c7c94522149276a"
+    },
+    {
+      "path": "idea_source/tests/test_paratra_api.py",
+      "sha256": "5d790077a56c51c4ec9dd91f2a4f9dae4d8f88f4c5530af965e9409a55253c8d"
+    },
+    {
+      "path": "idea_source/tests/test_protocol.py",
+      "sha256": "d4335d0f6a3b7c928ae41c0cab1db673a7ac2d182005bcc1fe095c3c75973c5f"
+    },
+    {
+      "path": "idea_source/tests/test_qwen3_8b_awm_skill_sft_vllm_service.py",
+      "sha256": "67667a0031198f1d4db6a439ec7fd2f90f8a040b3bfdfce1a79c2dd0f900a6f5"
+    },
+    {
+      "path": "idea_source/tests/test_qwen3_8b_awm_skill_vllm.py",
+      "sha256": "9d215581113a75358e119410b384dcef07e7ada94bfc3d3cf1c760bd7b4e612d"
+    },
+    {
+      "path": "idea_source/tests/test_qwen3_8b_awm_speed.py",
+      "sha256": "2e26f40340ebb9f0762c7a0b034b1d82649d2cf2b7de0d49d89300f377788201"
+    },
+    {
+      "path": "idea_source/tests/test_qwen3_8b_awm_step300.py",
+      "sha256": "eb2f93ac3940deb96f3836e3d3815c82a0db41aa07041d2eae9dec3c67d7bd21"
+    },
+    {
+      "path": "idea_source/tests/test_qwen3_8b_awm_step300_raw.py",
+      "sha256": "c92be54a9bebeab213c3ae1fd6d37a1491cf999ee922c9b89345bf112793152d"
+    },
+    {
+      "path": "idea_source/tests/watch_and_restart_awm_train.sh",
+      "sha256": "b5cae80bec50ad42e4ff73d8b27e51aa01dea23f65165a2614cad3147ac83ca6"
+    },
+    {
+      "path": "idea_source/tests/watch_awm_checkpoints.sh",
+      "sha256": "7e5875492d1134bebce64026efb4fe91bf86630d3a8bb97df3351a72f43065c9"
+    },
+    {
+      "path": "idea_source/tests/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "idea_source/tests/distributed/run_all.sh",
+      "sha256": "6292f00120b740a4e6daa3e825c946ca341a0d64068765734c2be45e2e1dcea4"
+    },
+    {
+      "path": "idea_source/tests/distributed/test_tensor_dict.py",
+      "sha256": "ce9d0237d1aed509437c8c538632fd61197415c009d4cefab4e9518a97c016a6"
+    },
+    {
+      "path": "idea_source/tests/e2e/check_custom_rwd_fn.py",
+      "sha256": "90ce9b2dcd7b2b95f1a8fbb992827e32a0b469660cf935ef997315b39cfdc1f7"
+    },
+    {
+      "path": "idea_source/tests/e2e/check_results.py",
+      "sha256": "689a0f95981bbe0a4ef7cd5afc5f9e3ba3a8e5299e4d282cbca1793c134d0a2b"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_dapo.sh",
+      "sha256": "54470be37beed708b8447d75e88e6778d2d4e11936a0a1b53a388cb6cfef7afd"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_gsm8k_fsdp_sgl_multiturn_sf_tool.sh",
+      "sha256": "40ef0759b5efaa01fbc880912bdc3dfc58f3ed4082b6dfd7a74ce48bcf639768"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_gsm8k_fsdp_sgl_multiturn_w_tool.sh",
+      "sha256": "343f7d6e2ae511d58e63d00e191d34dbe5362ebaf04a358e167bd485a3ab9f72"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_ppo_trainer_megatron.sh",
+      "sha256": "c85a406e582a35c063cc73423c7649589debecf1bcda8801f99ab230bf613e41"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_prime.sh",
+      "sha256": "7dda509578fa81e65bd4ce8039854063b90ccd8becbdaf9d12907da70e904c91"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_r1_distill_qwen_aime24_eval.sh",
+      "sha256": "3b17eafa7abfce1a92f5d343adc876936dc0c35c415420ad08f136dd1c2ebfd7"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_ray_trainer.sh",
+      "sha256": "036fe53c0552f72e6460461ebd1aee34db737e67e77525545d7aab8758de68c7"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_ray_trainer_fire_sampling.sh",
+      "sha256": "92214ac4d0b141ab21cdb9e6bcac223a932633228fbd3b51889e0b3f9ab62b3c"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_ray_trainer_rmpad.sh",
+      "sha256": "33625a8da0645f4c4a98927ab723366a19df5057a6dd233e0d810c2558c43757"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_spin.sh",
+      "sha256": "394f7ccd7b8100425efc9469aa24b194ca7ce4e1cc36c937439881c5013ce8c6"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_sppo.sh",
+      "sha256": "33ca4ef4b2474d8b2c5946e7f0eda201920c16c4930c22e9e19e0ecb6095dc94"
+    },
+    {
+      "path": "idea_source/tests/e2e/run_test.sh",
+      "sha256": "81e49bb3cdea7ded018095deacff6fd9b068b7c217ae7fdbc9c5f60a92b9a005"
+    },
+    {
+      "path": "idea_source/tests/e2e/__init__.py",
+      "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c"
+    },
+    {
+      "path": "idea_source/tests/gpu_utility/test_memory_buffers.py",
+      "sha256": "af1d273ea9cf1642c15cd74770bd7f1e958203eb2bedaff4bbb07864cefa68d6"
+    },
+    {
+      "path": "idea_source/tests/gpu_utility/test_ops.py",
+      "sha256": "74b2a8aa95560a9e51b06fe4ea878b0417adcab8e58d305c77872b786204d5c5"
+    },
+    {
+      "path": "idea_source/tests/gpu_utility/test_torch_functional.py",
+      "sha256": "50e83e849bb86dfc4b317aad97b5ce3a1ceb8fb0e4036e3073f626127560cbeb"
+    },
+    {
+      "path": "idea_source/tests/kernels/test_linear_cross_entropy.py",
+      "sha256": "3861436f5024c278f7fb028869c343784d05f8f7d38ffd5f86dc4c996975622f"
+    },
+    {
+      "path": "idea_source/tests/models/test_transformer.py",
+      "sha256": "0754f73641f20f49f1cb9ac7b24acbacf40e265272b446f32f577e01760e90a7"
+    },
+    {
+      "path": "idea_source/tests/models/test_transformers_ulysses.py",
+      "sha256": "ad692fae0e8f69b1a3492c2bbadb11657e859853011cf813a95bdcd98cb5d79b"
+    },
+    {
+      "path": "idea_source/tests/npu/run_qwen2_5_05b_grpo.sh",
+      "sha256": "45ae5c7d67bd9e7ac170a00db2e08d7aa6f792ecb13b7916b6f43200f78d450f"
+    },
+    {
+      "path": "idea_source/tests/npu/run_qwen2_5_32b_grpo.sh",
+      "sha256": "5f4cf6d2a46f8a56d0483540d8d5347be39a1c7f238625e3112a0bb849e5d441"
+    },
+    {
+      "path": "idea_source/tests/npu/run_qwen2_5_7b_grpo.sh",
+      "sha256": "8defda91cc5cd685d2bbf4694c6ca0f3a31d13561e8089535bd673c3986d4fa2"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_auto_padding.py",
+      "sha256": "4700a23a287abc1ac705fea06c9817a4a0ac65a8581ba534d313abeab582aa64"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_check_worker_alive.py",
+      "sha256": "6e59086f184bab28e6112521ec9f1ba15748eec54f34bddc8fe7fd2dcea2f8d9"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_decorator.py",
+      "sha256": "4acbce16a9f3beaa82ed9b22723a62725b0e5bd14ba5c0b925a7f07b951469a6"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_fused_workers.py",
+      "sha256": "b6e4666ae13baa15e5f7ff17fd0aba68a0b8c3e588da77a73aeb65627e17f5e6"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_ray_local_envs.py",
+      "sha256": "66bf752f12e5415fa66b083299ee365fc89b10d521ed1cb8a0886c364617481d"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/test_ray_utils.py",
+      "sha256": "01e6fe5bdd4c422155f57a6b0c37c765247a58c21b239ab7a6187bc8b2eecd28"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_colocated_workers.py",
+      "sha256": "58d5d1d891d52b95a170fc34a61073d376d6c8cfbe556f96372ac75ac3999ddd"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_colocated_workers_fused.py",
+      "sha256": "1b4bb5e169f6d7aff47bf4e4609cb6b3029354297d3b7080513a5bbece74cbfa"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_data_transfer.py",
+      "sha256": "137fc6af22405c03c8f2590b686493a472bfff71b6714df50e26b036ffd44a1f"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_driverfunc_to_worker.py",
+      "sha256": "816ba4e7159ba2ce80cf7dd96fe8ca04c85198ff692296e404c958efd37b9990"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_high_level_scheduling_api.py",
+      "sha256": "2392cb0475205e55439246f340c35b21ef44eaad972ce80b8b02f9c5e20f9b4e"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_rvdz.py",
+      "sha256": "08a0e782997f6f97f209847df2b571ea55581159cb16c31a800e6fdc8792f08b"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_worker_group_basics.py",
+      "sha256": "d779d1c5bb325b0249c40432db1b6954951659514f73a2f0359a2cf463c7f1b3"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/test_worker_group_torch.py",
+      "sha256": "a5ce1bee7696d977e8094fbe07db927421d120ae07eea010ed0719544c8d2ccd"
+    },
+    {
+      "path": "idea_source/tests/results/awm_three_services_multiturn.jsonl",
+      "sha256": "4b87fb7b66ef7cd768f341f04c13a952c68a03d6438df484788479326d950f13"
+    },
+    {
+      "path": "idea_source/tests/reward_score/test_sandbox_fusion.py",
+      "sha256": "9115bbbd2753ab0aa33ed605165ff6e5682f3472bb3a448fe9dfd5f374417811"
+    },
+    {
+      "path": "idea_source/tests/sandbox/test_sandbox.py",
+      "sha256": "4674ccdfd30a9090abf8efa226b0e2ae4af47658925265f9e2df581c2c039c43"
+    },
+    {
+      "path": "idea_source/tests/sanity/check_license.py",
+      "sha256": "3c61c3856558c95c6e6357067a148feb5729ab40979f17715dfa0cd337b6cc71"
+    },
+    {
+      "path": "idea_source/tests/sanity/test_import.py",
+      "sha256": "9c9a5474f4c0c4c64cdd503eb438a598a59e00534107c6651226e695c06954df"
+    },
+    {
+      "path": "idea_source/tests/trainer/__init__.py",
+      "sha256": "edb7b1cabaac4b78305d16db6c361578746eb06b53442a698d5e4c154c3d1125"
+    },
+    {
+      "path": "idea_source/tests/e2e/envs/__init__.py",
+      "sha256": "4daebf8a28f6da69f558aee98aca9d3ca785d1888720a145457284d992536c64"
+    },
+    {
+      "path": "idea_source/tests/e2e/generation/run_gen_qwen05.sh",
+      "sha256": "8ef0277233adf07ed680cc315d00f248a737bb60fb0d860c68a65df04ebc6d58"
+    },
+    {
+      "path": "idea_source/tests/e2e/ppo_trainer/run_function_reward.sh",
+      "sha256": "e1e503164f298ad60a2e300395cc81a0df05a7bf3d0673c905d7f5a81a0f577a"
+    },
+    {
+      "path": "idea_source/tests/e2e/ppo_trainer/run_model_reward.sh",
+      "sha256": "65726168c9c15a42568b15cf36cc846311e75beea847f04af0046f27ac407098"
+    },
+    {
+      "path": "idea_source/tests/e2e/sft/run_sft.sh",
+      "sha256": "4224c2096370d9ad31f7ef3d179fbfd355d04257b9778703010b8d7537427333"
+    },
+    {
+      "path": "idea_source/tests/e2e/sft/test_sp_loss_match.py",
+      "sha256": "307bc5a91c5f228fbd2fafa2172a2f7826b7e6f43fa4b3b4fa0569bf87e41866"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/model/config.json",
+      "sha256": "ad6b45e618d2b0649f73fb5c69757afe832491c122515683405456fa7249d327"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/model/create_model_tokenizer.py",
+      "sha256": "0b76902bba788012cc4bb33b4c91ab8b6007283e18f1f818590ecb3f07ebb34c"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/model/generation_config.json",
+      "sha256": "f380141cd54f85ab882a0e9ed14a56d51a7d8400dc4beb3db891dbae84a1bb89"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/model/tokenizer_config.json",
+      "sha256": "b0b977fc389f7b530f43d123b528ab21a5ccd5a4e9e4ea2e70919c366343382d"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/rl/main_trainer.py",
+      "sha256": "87b109aea753cb91fc1e49783fab6c5908263874968bba3b3ac11611702864b3"
+    },
+    {
+      "path": "idea_source/tests/e2e/arithmetic_sequence/rl/README.md",
+      "sha256": "704d0c29034ee32f87f0475ffa0abf55217bda01450783f65172a59f7e42b268"
+    },
+    {
+      "path": "idea_source/tests/e2e/envs/digit_completion/task.py",
+      "sha256": "e310aeee279425133d336b156515951921aabafa9a302d77b48d36a78021fdf5"
+    },
+    {
+      "path": "idea_source/tests/e2e/envs/digit_completion/tokenizer.py",
+      "sha256": "da148042f840c447d0d29f389f635984ad5035f94b27df9baace6b1f3aefb7a0"
+    },
+    {
+      "path": "idea_source/tests/e2e/envs/digit_completion/__init__.py",
+      "sha256": "4899ab1633185583f051c05406a4eec8187d0fab9e1f7205b04134ec7d596292"
+    },
+    {
+      "path": "idea_source/tests/ray_cpu/check_worker_alive/main.py",
+      "sha256": "8572fd7f2b38f15aa73ea30d69406352ab76123cadd88f7a3ed5231a436d3b5c"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/detached_worker/client.py",
+      "sha256": "6d7cbdaab05576580185a33fc9d470c02c20dc13134af62de6931edd5c0718bd"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/detached_worker/README.md",
+      "sha256": "21f9d64b62e4cc7c8160ae82ec294a137be532c7da27c7535e531b7c0ad2351d"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/detached_worker/run.sh",
+      "sha256": "e40d384af705cca56a35074e3b3fc554eead94a30aa83cd57d29ea4382a3af6c"
+    },
+    {
+      "path": "idea_source/tests/ray_gpu/detached_worker/server.py",
+      "sha256": "e480067122d5724d8bc50cc55de408ff5bd8f87cf1c7b9a716a4e248aea11e03"
+    },
+    {
+      "path": "idea_source/tests/single_controller/base/test_decorator.py",
+      "sha256": "bd3c1869114cad87ae4dee37e98a3b4409e1810447354bd89bb2596fcda2daf8"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_env_aux_loss_utils.py",
+      "sha256": "8fc11c1bf315a2f67597da2c4038d34296c22dc0d7b696addc516a09a5b8c9c0"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_episode_skill_guidance.py",
+      "sha256": "1d694b59c8fedbe4564777a2fdaa1cae4d3048d80928725a2d86fe391d211790"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_idea_advantage.py",
+      "sha256": "31f726550db2ef03b084ab15ffce69f9671ed5f18bb93d63842dc996cb383d51"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_idea_analyzer.py",
+      "sha256": "b4871a68110792033475004086b93189708fb98141ecb66123f768dbd42ca53c"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_idea_skill_gen_reward.py",
+      "sha256": "5bb500da7ecf5fb4f8e45c22240ddd4eb9098528c997e5e637eef2424f98f6e3"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_metric_utils.py",
+      "sha256": "0bc6d205f502cba73429c606ef4ebbdaa0afd07033d61d68cc63499ae667e562"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/test_opd_loss.py",
+      "sha256": "6ed1538ee9047a9aa04c12e28e8b8e5887699db91e2de20ccf68df85bf4cc269"
+    },
+    {
+      "path": "idea_source/tests/trainer/ppo/__init__.py",
+      "sha256": "5bf751cb7fba83b1c15b0083be83f40415ffcfe27af157f41b62edbbb88393ca"
+    },
+    {
+      "path": "idea_source/tests/utils/cpu_tests/test_fs.py",
+      "sha256": "4a7f48ff9a3dd17e7a81337c552f2bed1820eb258e3afb8d17e4949235e16fd1"
+    },
+    {
+      "path": "idea_source/tests/utils/cpu_tests/test_import_utils.py",
+      "sha256": "5531a27c15eeaf6a3fd3ffbf9d7fb535d0e39100d13a8ecc5b5412c4266cb9ba"
+    },
+    {
+      "path": "idea_source/tests/utils/cpu_tests/test_model.py",
+      "sha256": "9a5c00176b7fb13a811a15bd7cf4b781450ca27d190dbebc82df55d4e7b152e5"
+    },
+    {
+      "path": "idea_source/tests/utils/cpu_tests/test_module.py",
+      "sha256": "5a8f172eeb4de1d3ba3dfc9dcb7c43665b790a872faa12afd75185366ea13207"
+    },
+    {
+      "path": "idea_source/tests/utils/cpu_tests/test_timeout_decorator.py",
+      "sha256": "4dce17f205975c4f5d31195492376c5c01ef1ba78501047ed159414085f97d6d"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/test_activation_offload.py",
+      "sha256": "4b99ae6e06445f6c7a9f08bcb6a79fdaf04bf84b98d5bb73b5f64de60d343fce"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/test_flops_counter.py",
+      "sha256": "754d13d82b2abfa1931b6ec60e105f5d6723c83ef30d08b2934849a01259f19d"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/test_seqlen_balancing.py",
+      "sha256": "1f304319f03d14cd0867e65f948c9a65792a6de14aad21c910d0106fc497f3b1"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/test_torch_functional.py",
+      "sha256": "c22f11a47916e18fd28021fe1c7d988fe3c82f0e001cdea9e49b646c605beea0"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/checkpoint/test_fsdp_ckpt.py",
+      "sha256": "fb67ff048465de235c2bd5e33256476788ee7c2dbc4d2b1785714598fbbefb17"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/dataset/test_multiturn_sft_dataset.py",
+      "sha256": "57a2e1288da6107fd38d1e8f4cac31108a7b1612a9fe54abe3b75970d3d5744c"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/dataset/test_rl_dataset.py",
+      "sha256": "62d39461bc68dff9cba8a1c001ce95e3f161f740b7f6942c2f786d2b6c7c9e34"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/dataset/test_rm_dataset.py",
+      "sha256": "10c88aacb9ccdcf19445a80801f7a40c6fdfb339f2fce3194973c78bc82a34da"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/dataset/test_sft_dataset.py",
+      "sha256": "4da33e8306f398fea5f7fe8f979c7f008314c8a27e50f327ebc4ccb59becd432"
+    },
+    {
+      "path": "idea_source/tests/utils/gpu_tests/megatron/test_pipeline_parallel.py",
+      "sha256": "633ae52e4e760e93d990a37616420587cd332527e2d66c18c85ba390e8fa0a1f"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/async_rollout_utils.py",
+      "sha256": "a460585a6af48bbd1114dfa13ef6166871a799be1f87cb61d52d73bfc20df1ec"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/run_fsdp_vllm.py",
+      "sha256": "2ae1e3572056e46f4db848b702cf775727cb9d18c4efa904f5c18a7fbd768d6a"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_async_sglang_server.py",
+      "sha256": "ee68eb26d3963db0a54768a391691bbd347e80953216619aa96bda9af212f3c2"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_hf_rollout.py",
+      "sha256": "e56c33e780b614653a0b01aa9ee71ab974494f37ebb17ea0f22e9ceeba131f76"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_sglang_async_rollout_search_tools.py",
+      "sha256": "6311ad9f7e5ccf0bcbbea5274902bdc117710b7c799cfd788e7a85a09595267f"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_sglang_async_rollout_sf_tools.py",
+      "sha256": "33c123af84b19815ccaf675c8493ec0973457caeb243f18600bcc655abd50af6"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_sglang_async_rollout_w_tools.py",
+      "sha256": "5481f7715be78853657c849f84d58c9d59c51005cc59cc3be41754884a18f129"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_sglang_spmd.py",
+      "sha256": "2d0619e757d8eb9f790b730b8ef66e5a2f02d003b7f9c5a15c734b49d0e798a2"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_vllm_hf_loader.py",
+      "sha256": "cfdf2cff60bf3eba9248cb0554a80819db6e7210dc00dd83a0f2b0416c64f40d"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_vllm_multi_turn.py",
+      "sha256": "787746dd89af75bb562e45c3c06b855caa82cbddd2a95f1ceb41da29568ac18c"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_vllm_spmd.py",
+      "sha256": "b2625323b25de5da939efd20016895436641fc417a027f7918d00a3b4d44023d"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/test_vllm_tool_calling.py",
+      "sha256": "39b6d3bf88cd9611c0595b48f9077c6e1a5a4d0686b790358c17fa95bd20b713"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/utils_sglang.py",
+      "sha256": "66f1cd96fc84005c97f32505a532ee8ba7184735c060386fae49994b3419ec0e"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/resource/tool_configs/sandbox_fusion_tool_config",
+      "sha256": "620c03152498a45b2a8f7fa20cd01697576979f9dc569aeee7991346c3a1caec"
+    },
+    {
+      "path": "idea_source/tests/workers/rollout/resource/tool_configs/search_tool_config",
+      "sha256": "890f5c1799a5c9979bf7424bfdcc099fbebf55e6eaf256e46abf7a6618f0cc21"
+    },
+    {
+      "path": "idea_source/test/plot_training_metrics.py",
+      "sha256": "9d8926180661156b440d0755d45b34549d1a4dc56324eddb6b8a68c508057a1a"
+    },
+    {
+      "path": "idea_source/vllm_model/vllm_model.sh",
+      "sha256": "50483a54a8d1fdaee34a46a5e4c52046b4f7e62e3bdd17957050a0fa1f014ce6"
+    },
+    {
+      "path": "idea_source/vllm_model/vllm_model_ours.sh",
+      "sha256": "03c65e6b50953a905920596cd3601d3fad7f94ceee11db3d53dec66518e84b51"
+    },
+    {
+      "path": "idea_source/vllm_model/vllm_model_qwen_35_9b.sh",
+      "sha256": "b1c6540170a38b5a36c067f218f62af6f610bdad693f92c93c9ea0d16af63ef8"
+    },
+    {
+      "path": "idea_source/vllm_model/vllm_model_qwen_3_8b.sh",
+      "sha256": "c51c120294dab5a647045ee37cdf75a230e64fc43240e08ff4efa6fef88d4b33"
+    },
+    {
+      "path": "idea_source/vllm_model/vllm_model_sft_v1.sh",
+      "sha256": "b6a25b0d0c306e4749a21a0fac745f8b56ee61c58d2d224d19a517015996d0cc"
+    },
+    {
+      "path": "idea_source/scripts/sft/README.md",
+      "sha256": "30985c7525350bf37b5a46094e7f1d0b7854dec6e4a8fe7b97dad3d431241a95"
+    },
+    {
+      "path": "idea_source/scripts/sft/__init__.py",
+      "sha256": "08076d837a73ba51f7b23feb9d48fc0b9f041432bf59f78a88ab94d899a2b95c"
+    },
+    {
+      "path": "idea_source/scripts/sft/alfworld/pipeline.py",
+      "sha256": "db367b0a742fa1fe64c97803a41baf3f40f4a5fea844e10f0c312d879540194a"
+    },
+    {
+      "path": "idea_source/scripts/sft/alfworld/prepare_data.sh",
+      "sha256": "6cdd72985e5e79272721651fb769667cb10473ec77bcdaadf14dd1f35e687b11"
+    },
+    {
+      "path": "idea_source/scripts/sft/alfworld/train_sft.sh",
+      "sha256": "0a688bdb125819270ffc5656d67aa1b8a5c2cdd73139a1c542c54d970ea3ea67"
+    },
+    {
+      "path": "idea_source/scripts/sft/alfworld/__init__.py",
+      "sha256": "604e7632f41ad316ac1ffd0348eabe3ce302a813482988cf78de10e02185df69"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/build_candidate_skill_sft.py",
+      "sha256": "f87704bedd267e064ab3f2287d0d88cf090083eac48680122900da1e31080d86"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/debug_appointment_second_turn.py",
+      "sha256": "83f6680d2fcfbedbf9be87babd2ff48142238a483f6e3b206a54f63de3e44d87"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/debug_appointment_second_turn_flattened.py",
+      "sha256": "2c176c52508e55d20611e2d0b16210d3c4b3849a1a5cc7697021c9d042a79ae6"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/eval_three_models.py",
+      "sha256": "9b7a7af696aa82db9a0fd4a99bb6dde18cfc76350f342377cf8b0b48a16d2791"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/extract_skills_from_rollouts.py",
+      "sha256": "0998276f6440adc461852639e326dec7d0e104573a5753fe1f6253348ef6b9d0"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/merge_turn_sft_data.py",
+      "sha256": "0b5e980e96fc3fd95fc0bb42e482f9104f836f403d01e1cfaa4d26a033312ee0"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/run_qwen3_8b_sft.py",
+      "sha256": "57dd11e617db9fd59ee59c8692712db157eea4dc82f83dc8d09859dd36ecb0d7"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/run_qwen3_8b_verl_sft.sh",
+      "sha256": "510155a67c0ecf4fe6679a0ba37d93fb636e79638a91676935272e736a88c87c"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/run_transformers_sft.py",
+      "sha256": "11d9c248cb226863cdc51c6505ac0915b4d40ab4c52fc462fc33bb39d643ad87"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/save_original_qwen3_checkpoint0.py",
+      "sha256": "740213c1a0d1fc91c4943c188f7d2421b33bc749aeb4831bf850a84984fd04ad"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm/test_qwen3_8b_awm_checkpoint.py",
+      "sha256": "2ebd6eceb0929b8d6445393cf5baafcf09066fb60ccc745766ef77b2bf7c02ce"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm_sft/convert_skill_extract.py",
+      "sha256": "b6826b62219c47436893f3ed2d4ff834eed6d406bdce90e80c12ca1248728a6b"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm_sft/prepare_data.sh",
+      "sha256": "2990c9972d53c135c897231e20f9f3bca9ce0fe70e1c5ce868d8a60868d8039a"
+    },
+    {
+      "path": "idea_source/scripts/sft/awm_sft/train_sft.sh",
+      "sha256": "f3dcd00ac353dac42d70e3ea662bae224a8669ba5b850f96603125f5b7050e0b"
+    },
+    {
+      "path": "idea_source/scripts/sft/checklist/convert_checklist_to_idea.py",
+      "sha256": "f80f805cbb89e876cf50390761fd94be0c785092b318cbc30faf7cee2bc496a9"
+    },
+    {
+      "path": "idea_source/scripts/sft/checklist/run_cm2_style_rollout_validation.py",
+      "sha256": "cc1ebb39201d782a96d41264fa5a8b95fe6ae8c28ad076cbb1a8c971cd94eadb"
+    },
+    {
+      "path": "idea_source/scripts/sft/checklist/run_skill_pipeline.py",
+      "sha256": "75f0c55ccb273a49938558e87835ae03c48d82bbad07b5bfae7450f9a4c4daad"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/build_sft_from_rollouts.py",
+      "sha256": "a16417085b4d9fef80337bc3bb7c14985c2eba3dc5f2c008a49e3c817633c7be"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/collect_baseline_rollouts.py",
+      "sha256": "0d748d7706133fdb94c3fc649dc37674e3101bdb92d657e1a0a5299560ba0813"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/generate_candidate_skills.py",
+      "sha256": "4d50312fb1c17df9094a58f4af0e1f16dd0c0226bbd069a9edb3b7bcd7deb96d"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/prepare_data.sh",
+      "sha256": "9176a10edceedbd495905b6bcf2e097a602f55e782201ae66dc9dbcf666c4064"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/train_sft.sh",
+      "sha256": "5e0c327467e1d346e91edf4548a7e14e70422c00c5b9df6885eff47d46dcb87d"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/_collect_rollouts.sh",
+      "sha256": "f6eefee267b602878d8ba6f2d61b380408a0710f7a7dd7440631841968a88934"
+    },
+    {
+      "path": "idea_source/scripts/sft/ezpoints/__init__.py",
+      "sha256": "ecae6f3727bb3f8fffed5778fca08a548ad9fa3dbc3626b82fb1db631ce505c2"
+    },
+    {
+      "path": "idea_source/scripts/sft/search/pipeline.py",
+      "sha256": "13446451446e6462e96e9312cc78d95eecab2f33edd454072a96ca24b6a272e0"
+    },
+    {
+      "path": "idea_source/scripts/sft/search/prepare_data.sh",
+      "sha256": "16974c515f1531c539b2cc8722ac7e2481ee8f3ba39ae89945f57d5803d5e682"
+    },
+    {
+      "path": "idea_source/scripts/sft/search/train_sft.sh",
+      "sha256": "8913fc6c3e36ebd9bc72a8d1fe3a274fe1a0442dc073d67579e6e58d4a5b52e3"
+    },
+    {
+      "path": "idea_source/scripts/sft/search/__init__.py",
+      "sha256": "bf5d97fd53927556d63ba0063d0f1e5627f339df4ea7ee46472776e73253afde"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/build_sft_from_rollouts.py",
+      "sha256": "44e2ab03636b869f4e4f0ddb83288dcc350242745f5f4cf481dd8db6c81ab11e"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/collect_baseline_rollouts.py",
+      "sha256": "a810ed5f1ae943bc2d34173e55ec1c8816c5a7d2092433f3118ca6123456aa3e"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/export_baseline_rollouts.py",
+      "sha256": "c4fd9cf4a303b81878ce1ac0b589d83d60ba0453bc851f79eb4eaa6b9dfd71d9"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/generate_candidate_skills.py",
+      "sha256": "5238d55ebb8854629ec5776f83bbbc36c35111e666c13bdfcc0cf9d10e9c814f"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/prepare_data.sh",
+      "sha256": "36201e12580dfb3137f671cea84302f3c28d39759d28bc7d73bc522fc02a88a3"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/run_all.sh",
+      "sha256": "5e578b9ba12d3f8642624aa6dfd4b9b61b4c214be53e9bfd66db8058eea364f6"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/sokoban_good_path.env",
+      "sha256": "f42d5576915123c043514879d58fecbe81aa21407350fd2a874d478fef27888e"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/train_sft.sh",
+      "sha256": "a94c6ef24a0c76c0f24f77a8efdd6c1792dcc2646b133b507f06edae75497685"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/_collect_rollouts.sh",
+      "sha256": "2e8d6291bd64e8880ac1ef1c04b5f9115829f366b2c2b42cefcdc0ea83ac09d0"
+    },
+    {
+      "path": "idea_source/scripts/sft/sokoban/__init__.py",
+      "sha256": "20661627eecbe8810983a589c91f40c5353931c8a269a8728c404b38eacfddf0"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/pipeline.py",
+      "sha256": "e6348d27e78348945ab0a24195dad5b339dc18fab2cd1790a98f69d8f4f18cdb"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/prepare_data.sh",
+      "sha256": "5544e19ceedec0eef72069655047ac4a011f472077d07686a68ea298fd759fbb"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/train_sft.sh",
+      "sha256": "3bf7f455e13e4169a32a6cc0858f01ce62f0eaf8022bf0a8260b7419643d802c"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/__init__.py",
+      "sha256": "6e548d6e4659f621fec6823b1e7da467aa9ba02b21ba7b23b62597d1f607f591"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common/pipeline.py",
+      "sha256": "4b7dc1978f775a0e174c8eff6edce811834ceacb38bfda71dd11902351d8cf01"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common/teacher_naming.sh",
+      "sha256": "6327b03c54596e5fe895e529c68db12b58c3267f4953af4bdd29e94a2fe47d09"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common/trainer.sh",
+      "sha256": "3e078443f34aea47b11402e47a776820c861c90fdbc8d70d5db33550ec13d9d2"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common/__init__.py",
+      "sha256": "97eb7143466dd8c99f10d44aa143b6fe07a9d6f47b5a0e6f5b6def3562d0d0de"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common_v1/pipeline.py",
+      "sha256": "7ec45d9b7de17532131a7d52b80ad764e160e4ea46ed6bccd8117ed06b1754ba"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common_v1/teacher_naming.sh",
+      "sha256": "6327b03c54596e5fe895e529c68db12b58c3267f4953af4bdd29e94a2fe47d09"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common_v1/trainer.sh",
+      "sha256": "0983451dd2483b222185a0c2844b13ca6ef2d0762ac7942cb09be0b5c2ca330e"
+    },
+    {
+      "path": "idea_source/scripts/sft/_common_v1/__init__.py",
+      "sha256": "97eb7143466dd8c99f10d44aa143b6fe07a9d6f47b5a0e6f5b6def3562d0d0de"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/experiments/run_filtered_after_train.sh",
+      "sha256": "c78d7871f07b72fb1d25e06f63a2f518588e4faa30319dd335f8c797f874737b"
+    },
+    {
+      "path": "idea_source/scripts/sft/webshop/experiments/run_sft_rl_from_filtered.sh",
+      "sha256": "60f26d51ad9d64ffc1d7cb6089d65e50fa080f907a399c6b1dfcd6dcf7da50b5"
+    },
+    {
+      "path": "idea_source/prepare_skill_extract_sft.py",
+      "sha256": "7231eccdd722abd13548bfd98bd343f46dcd7a54232e08255b1d172f1ed23262"
+    },
+    {
+      "path": "idea_source/external_source/webshop_setup.sh",
+      "sha256": "1d3f443527c6a4bfe44a2ac73314f9a7c0f81c7d4ff9726b85aba9b15327a4f4"
+    }
+  ],
+  "syntax_repairs": [
+    {
+      "path": "idea_source/verl/workers/critic/dp_critic.py",
+      "sha256_before": "065468af7b2aa1a95b86789466c499e0293eaa8b918879d7fbe1c030bfc50d25",
+      "sha256_after": "e9bb3197782fdb05f53659faadecbc6ac9b055b93dc17d9caf7072b0007a52c3",
+      "reason": "Join a split assignment in the optional PPO critic; no change to the reward code or frozen evidence."
+    }
+  ]
+}

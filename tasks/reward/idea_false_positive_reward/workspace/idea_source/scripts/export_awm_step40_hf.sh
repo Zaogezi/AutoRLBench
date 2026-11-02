@@ -2,10 +2,10 @@
 set -euo pipefail
 
 PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-CHECKPOINT="${CHECKPOINT:-/local/user/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v3/global_step_40}"
+CHECKPOINT="${CHECKPOINT:-/workspace/historical/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v3/global_step_40}"
 OUTPUT_ROOT="${OUTPUT_ROOT:-$PROJECT_ROOT/outputs/awm_opsd_qwen3_8b_step693_wandb_v3}"
-PYTHON="${PYTHON:-/local/user/miniconda3/envs/verl-tool-env/bin/python}"
-VERIFY_PYTHON="${VERIFY_PYTHON:-/local/user/conda_envs/seed/bin/python}"
+PYTHON="${PYTHON:-/workspace/historical/miniconda3/envs/verl-tool-env/bin/python}"
+VERIFY_PYTHON="${VERIFY_PYTHON:-/workspace/historical/conda_envs/seed/bin/python}"
 ACTOR="$CHECKPOINT/actor"
 TARGET="$OUTPUT_ROOT/$(basename "$CHECKPOINT")_hf"
 

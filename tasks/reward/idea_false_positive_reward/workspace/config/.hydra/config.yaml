@@ -27,7 +27,7 @@ data:
 actor_rollout_ref:
   hybrid_engine: true
   model:
-    path: /local/user/models/opsd-tool/awm_episode_skill_sft_qwen3_8b_ep3_20260921_164910/global_step_693
+    path: /workspace/models/IDEA_sft
     use_shm: false
     external_lib: null
     override_config: {}
@@ -331,7 +331,7 @@ trainer:
   critic_warmup: 0
   default_hdfs_dir: null
   del_local_ckpt_after_load: false
-  default_local_dir: /local/user/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v5
+  default_local_dir: /workspace/outputs
   max_actor_ckpt_to_keep: null
   max_critic_ckpt_to_keep: null
   ray_wait_register_center_timeout: 300

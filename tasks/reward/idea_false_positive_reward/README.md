@@ -45,9 +45,47 @@ Prepare downloads dataset inputs from `locaszzz/AgentWorldModel-1K` at commit
 `6f8a98a043c631ba9c88dd1d1d1d1829a1f9dca5`, checking SHA-256 and byte sizes.
 Frozen logs and trajectories ship with the task; diagnosis and verification are
 offline after prepare. Offline checks replay the 8 cases, verify the 20-episode subset
-and check answer isolation. Hosted semantic grading and a corrected/control run
-have not been performed. The optional `idea-historical` training image is
+and check answer isolation. Hosted issue-agent/judge attempts were performed on 2026-10-31 (see the local review delivery); a corrected/control training run has not been performed. The optional `idea-historical` training image is
 **not yet built**. Commands and evidence boundaries are in
 [verifier resources](evaluations/issue/verifier/resources/README.md).
 Component terms are in [LICENSE](LICENSE) and
 [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+
+## Review and execution guide
+
+Scope: **issue only; no solution evaluation or solution training cost applies**. Run package validation from the repository root:
+
+```bash
+python -m autorlbench validate tasks/reward/idea_false_positive_reward
+```
+
+Evidence entry points: `workspace/config/.hydra/config.yaml`, `workspace/logs/rollouts/`, `workspace/logs/idea_analysis/`, and the W&B history under `workspace/logs/wandb/`. Reviewer-only case audits are under `evaluations/issue/verifier/resources/`. The symptom, mechanism and counterfactual
+comparison are explained above; raw logs remain the source of truth. Historical
+comparisons establish the documented case, not a guarantee over new seeds.
+
+The task README, task card, issue oracle, solution oracle/reference patches and
+verifier resources are reviewer material. Agents receive the level-specific
+`instruction.md` and staged `workspace/`; do not place the reviewer README or
+oracle in the workspace. Issue instructions use the common diagnosis scaffold.
+Solution instructions describe the fixed workload, deliverables and acceptance
+contract without specifying a repair. Upstream contribution policies and unrelated
+utilities are excluded; the hidden round-two workspace audit records removals.
+Production modules and frozen evidence are retained for diagnosis and import
+compatibility; this is not a file-by-file minimal dependency extraction.
+
+### Resource budget
+
+Issue diagnosis uses CPU and frozen evidence: **0 GPU-hours**. The optional historical training recipe is outside this task's acceptance scope.
+
+### Offline review, 2026-11-01
+
+This review runs package validation, evidence/hash checks and applicable CPU
+checks only. It does not run a model agent, hosted judge, GPU training, prepare
+downloads, or checkpoint deserialization. GPU figures above are historical
+measurements or configured timeout bounds; they are not measurements from this
+review. Fresh end-to-end solution correctness remains unverified this round.
+
+The offline source audit also joined a split assignment in the optional PPO critic
+(`idea_source/verl/workers/critic/dp_critic.py`) so the snapshot parses. This is
+a packaging syntax repair, not the reward defect or evidence of a new training run.
+The hidden workspace audit records its before/after hashes.

@@ -5,8 +5,8 @@
   "args": [
     "--node-ip-address=192.0.2.1",
     "--node-manager-port=37881",
-    "--object-store-name=/local/user/ray/ray/session_2026-10-11_11-21-55_752970_3334325/sockets/plasma_store",
-    "--raylet-name=/local/user/ray/ray/session_2026-10-11_11-21-55_752970_3334325/sockets/raylet",
+    "--object-store-name=/workspace/historical/ray/ray/session_2026-10-11_11-21-55_752970_3334325/sockets/plasma_store",
+    "--raylet-name=/workspace/historical/ray/ray/session_2026-10-11_11-21-55_752970_3334325/sockets/raylet",
     "--redis-address=None",
     "--metrics-agent-port=63652",
     "--logging-rotate-bytes=536870912",
@@ -14,7 +14,7 @@
     "--runtime-env-agent-port=65255",
     "--gcs-address=192.0.2.1:48588",
     "--session-name=session_2026-10-11_11-21-55_752970_3334325",
-    "--temp-dir=/local/user/ray/ray",
+    "--temp-dir=/workspace/historical/ray/ray",
     "--webui=127.0.0.1:8265",
     "--cluster-id=71728b81ee704a75aca8a5f0289033b547dd1be564950c2be4125d48",
     "--startup-token=64",
@@ -22,15 +22,15 @@
     "--node-id=feb22d6ec0167cdafde62caa98d879456aefce27a4cb8072145dea83",
     "--runtime-env-hash=-1106042212"
   ],
-  "program": "/local/user/conda_envs/seed/lib/python3.12/site-packages/ray/_private/workers/default_worker.py",
+  "program": "/workspace/historical/conda_envs/seed/lib/python3.12/site-packages/ray/_private/workers/default_worker.py",
   "git": {
-    "remote": "REDACTED_EMAIL:jinyangwu/SEED.git",
+    "remote": "https://example.invalid/source.git",
     "commit": "02d30b4e65a1e5c82d766952b066995a51c8ce3c"
   },
   "email": "REDACTED_IDENTITY",
   "root": "/workspace/seed_source",
   "host": "REDACTED_IDENTITY",
-  "executable": "/local/user/conda_envs/seed/bin/python3",
+  "executable": "/workspace/historical/conda_envs/seed/bin/python3",
   "cpu_count": 32,
   "cpu_count_logical": 64,
   "gpu": "NVIDIA A800 80GB PCIe",

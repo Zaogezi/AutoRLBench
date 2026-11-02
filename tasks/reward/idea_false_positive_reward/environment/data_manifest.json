@@ -123,8 +123,8 @@
     },
     {
       "path": "logs/wandb/run-20261011_112547-wszt4s3y/files/output.log",
-      "sha256": "3bb638c6a43b3488cbc316d1a88c7c1ec1a069235f1c014fe52d87969e454275",
-      "bytes": 2198086
+      "sha256": "bde79a3b83cf2ff018f8534e594cc3b2a8e017668557caf62aa86becdca0f90d",
+      "bytes": 2197996
     },
     {
       "path": "logs/wandb/run-20261011_112547-wszt4s3y/logs/debug-internal.log",
@@ -133,8 +133,8 @@
     },
     {
       "path": "logs/wandb/run-20261011_112547-wszt4s3y/logs/debug.log",
-      "sha256": "44b84ba834919230ae014fd07da16779406bab373dd8e400e90ded1d33a224fb",
-      "bytes": 12322
+      "sha256": "5fc4031b8d9b342d35c5e02c445b01ac47bcbb798c74003ec26c62fb126636e5",
+      "bytes": 12070
     }
   ]
 }

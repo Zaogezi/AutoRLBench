@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MODEL_ROOT="${MODEL_ROOT:-/local/user/models/qwen3_8b_awm_skill_sft_verl}"
+MODEL_ROOT="${MODEL_ROOT:-/workspace/historical/models/qwen3_8b_awm_skill_sft_verl}"
 BASE_PORT="${BASE_PORT:-8120}"
 LOG_DIR="${LOG_DIR:-/workspace/idea_source/outputs/awm_qwen3_8b_eval/vllm_logs}"
-VLLM="${VLLM:-/local/user/conda_envs/vllm_qwen_1/bin/vllm}"
+VLLM="${VLLM:-/workspace/historical/conda_envs/vllm_qwen_1/bin/vllm}"
 TOKENIZER_PATH="${TOKENIZER_PATH:-$MODEL_ROOT/global_step_1600_vllm}"
 STEPS=(100 300 500 700 900 1100 1300 1600)
 

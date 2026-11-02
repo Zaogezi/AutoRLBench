@@ -2,7 +2,7 @@ wandb: Detected [openai] in use.
 wandb: Use W&B Weave for improved LLM call tracing. Install Weave with `pip REDACTED_IDENTITY weave` then add `import weave` to the top of your script.
 wandb: For more information, check out the docs at: https://weave-docs.wandb.ai
 Using LocalLogger is deprecated. The constructor API will change
-Checkpoint tracker file does not exist: %s /local/user/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v5/latest_checkpointed_iteration.txt
+Checkpoint tracker file does not exist: %s /workspace/outputs/latest_checkpointed_iteration.txt
 Training from scratch
 Training Progress:   3%|▎         | 6/200 [1:51:13<65:55:38, 1223.39s/it]
 SEED analysis backend: policy_vllm, configured_workers: 8, max_workers: 8
@@ -42624,5 +42624,5 @@ Continue with one MCP call, or give a plain final answer if the task is complete
 {"name":"call_tool","arguments":"{\"tool_name\":\"mcp_tool_mcp_server_list_programs\",\"arguments\":{\"organization_id\":1,\"name\":\"Food Pantry\",\"is_active\":true}}"}
 </tool_call><|im_end|>
 [agent_world_model][score] 0.0
-local_global_step_folder: /local/user/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v5/global_step_200
+local_global_step_folder: /workspace/outputs/global_step_200
 step:200 - seed/teacher

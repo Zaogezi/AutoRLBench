@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-MODEL_PATH="${MODEL_PATH:-/local/user/Qwen3.8-27B}"
+MODEL_PATH="${MODEL_PATH:-/workspace/historical/Qwen3.8-27B}"
 MODEL_NAME="${MODEL_NAME:-qwen38-27b}"
 PORT="${PORT:-8200}"
 GPU_DEVICES="${GPU_DEVICES:-0,1,2,3}"

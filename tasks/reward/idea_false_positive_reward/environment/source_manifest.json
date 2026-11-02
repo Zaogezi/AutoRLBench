@@ -43,6 +43,10 @@
     {
       "from": "logs/seed_analysis/",
       "to": "logs/idea_analysis/"
+    },
+    {
+      "from": "/local/user/",
+      "to": "/workspace/historical/"
     }
   ],
   "sanitization": {
@@ -81,7 +85,7 @@
         "path_at_capture": "seed_source/examples/search/retriever/retrieval_server.py",
         "path": "idea_source/examples/search/retriever/retrieval_server.py",
         "sha256_before": "3a10d8d426eb48d4e7ef8eb8e78c84019fe92f1b06837174eaabb883c256dd3d",
-        "sha256_after": "e13b64a89e32d9d1030a4b5eed899e595513a364b2e1dc9ea9319d967afe8593"
+        "sha256_after": "0e77dd3d922bdcaa0f6102aa57d62b0e5503a8e22bf271c39a948a6527da0ac0"
       },
       {
         "path_at_capture": "seed_source/external_source/webshop_setup.sh",
@@ -135,7 +139,7 @@
         "path_at_capture": "seed_source/scripts/export_awm_step40_hf.sh",
         "path": "idea_source/scripts/export_awm_step40_hf.sh",
         "sha256_before": "f2ae84ff3803ae43e0f043c2565b43d443948eaddc061abf3307b35e63588762",
-        "sha256_after": "929c0b82b8b5518167aeeaf76e7acc86e025a17170d205409447873e6d0bbae6"
+        "sha256_after": "3900bf43686155aa329aa03a5bdfc6d3a57b19c0965610be50aacf4ec92e608f"
       },
       {
         "path_at_capture": "seed_source/scripts/install_vllm_sglang_mcore.sh",
@@ -147,31 +151,31 @@
         "path_at_capture": "seed_source/scripts/sft/awm/run_qwen3_8b_sft.py",
         "path": "idea_source/scripts/sft/awm/run_qwen3_8b_sft.py",
         "sha256_before": "4abe0afb088e2e00fe7c5e31653ab72af9e5981cac6f39937eabdd62337803fb",
-        "sha256_after": "6d8825e3567e27102864aa6830b00a1b8b526a446c38ef95ad9be980062daf19"
+        "sha256_after": "57dd11e617db9fd59ee59c8692712db157eea4dc82f83dc8d09859dd36ecb0d7"
       },
       {
         "path_at_capture": "seed_source/scripts/sft/awm/run_qwen3_8b_verl_sft.sh",
         "path": "idea_source/scripts/sft/awm/run_qwen3_8b_verl_sft.sh",
         "sha256_before": "86a5736d562092cde2b7caa68680c4d284b3992a4173451f34741abd49e9d19e",
-        "sha256_after": "8d59be1f48110db4604e8a9253e4d160e31fcf7fa6f340494cce5989e9b07c06"
+        "sha256_after": "510155a67c0ecf4fe6679a0ba37d93fb636e79638a91676935272e736a88c87c"
       },
       {
         "path_at_capture": "seed_source/scripts/sft/awm_sft/train_sft.sh",
         "path": "idea_source/scripts/sft/awm_sft/train_sft.sh",
         "sha256_before": "8aeef1509bcb0699163a6e0cf72d89e921f7d9346a7a9297b620e4e64fa65164",
-        "sha256_after": "17f15e8b10ea14a560a541b5bb663347e249aa9e9f845ee45c645f15e259ec1d"
+        "sha256_after": "f3dcd00ac353dac42d70e3ea662bae224a8669ba5b850f96603125f5b7050e0b"
       },
       {
         "path_at_capture": "seed_source/scripts/sft/checklist/run_cm2_style_rollout_validation.py",
         "path": "idea_source/scripts/sft/checklist/run_cm2_style_rollout_validation.py",
         "sha256_before": "ef4493d1f871ba31af7871e995db93a32a20392cb628816cd2e15efb018c071b",
-        "sha256_after": "e84e3ce20b8f23a6f552efebcfbbf9680be9ad3c124ab9967ba4b989c7314c81"
+        "sha256_after": "cc1ebb39201d782a96d41264fa5a8b95fe6ae8c28ad076cbb1a8c971cd94eadb"
       },
       {
         "path_at_capture": "seed_source/scripts/sft/checklist/run_skill_pipeline.py",
         "path": "idea_source/scripts/sft/checklist/run_skill_pipeline.py",
         "sha256_before": "ef5b9d509a99cc5285c38df985359c83611281b665d5f67900caad7e39abe7f4",
-        "sha256_after": "e28af83ff4617d873b85189589a6c831c52a1bd38de6f83dae85b70e8dc741c9"
+        "sha256_after": "75f0c55ccb273a49938558e87835ae03c48d82bbad07b5bfae7450f9a4c4daad"
       },
       {
         "path_at_capture": "seed_source/scripts/test_azure_openai.py",
@@ -237,13 +241,13 @@
         "path_at_capture": "seed_source/vllm_model/vllm_model_qwen_35_9b.sh",
         "path": "idea_source/vllm_model/vllm_model_qwen_35_9b.sh",
         "sha256_before": "6c1bcab01af9a2c435ec086beafa434d54d6733d991aea40b99b3acc7dfe1a59",
-        "sha256_after": "ba25aad8d1b8b4aa3685c0bd570566c5cf04f8a0fc32b49da28abf8781371d74"
+        "sha256_after": "b1c6540170a38b5a36c067f218f62af6f610bdad693f92c93c9ea0d16af63ef8"
       },
       {
         "path_at_capture": "seed_source/vllm_model/vllm_model_qwen_3_8b.sh",
         "path": "idea_source/vllm_model/vllm_model_qwen_3_8b.sh",
         "sha256_before": "724754da81df03e2635478a250776554f33b9a33297b0089f98e1331d199e971",
-        "sha256_after": "bb25f7400b5c34634118f19c9e5dd33db5e599c48813b072ca8e85cacd3fa74f"
+        "sha256_after": "c51c120294dab5a647045ee37cdf75a230e64fc43240e08ff4efa6fef88d4b33"
       },
       {
         "path_at_capture": "awm_source/README.md",
@@ -267,7 +271,7 @@
         "path_at_capture": "workspace/logs/wandb/run-20261011_112547-wszt4s3y/files/output.log",
         "path": "logs/wandb/run-20261011_112547-wszt4s3y/files/output.log",
         "sha256_before": "527f24de18c1a74eeed07d068b76f3b6e1e7c5c93b4b469691c5bf40d96112b5",
-        "sha256_after": "3bb638c6a43b3488cbc316d1a88c7c1ec1a069235f1c014fe52d87969e454275"
+        "sha256_after": "bde79a3b83cf2ff018f8534e594cc3b2a8e017668557caf62aa86becdca0f90d"
       },
       {
         "path_at_capture": "workspace/logs/wandb/run-20261011_112547-wszt4s3y/logs/debug-internal.log",
@@ -279,7 +283,121 @@
         "path_at_capture": "workspace/logs/wandb/run-20261011_112547-wszt4s3y/logs/debug.log",
         "path": "logs/wandb/run-20261011_112547-wszt4s3y/logs/debug.log",
         "sha256_before": "94c29ceb9860d6445179c0a77e3df8eeb9d595760e16fcf247d090087a9629f2",
-        "sha256_after": "44b84ba834919230ae014fd07da16779406bab373dd8e400e90ded1d33a224fb"
+        "sha256_after": "5fc4031b8d9b342d35c5e02c445b01ac47bcbb798c74003ec26c62fb126636e5"
+      },
+      {
+        "path_at_capture": "config/.hydra/config.yaml",
+        "path": "config/.hydra/config.yaml",
+        "sha256_before": "0e829a0fe127c3b7bc4abf3453b031e747c10b77bbf318f685ccb34398aeb95d",
+        "sha256_after": "4c270d3e8ea73dd8ff94b68de5e65d9fbdb24b830e97f8c43da7e72cf8c998c0"
+      },
+      {
+        "path_at_capture": "config/.hydra/hydra.yaml",
+        "path": "config/.hydra/hydra.yaml",
+        "sha256_before": "b663d83f89358de1200e1f384b0851b9820733f2b75d99a3a1b78a6f8263bb5f",
+        "sha256_after": "08473d9046904f811379630c5aee6621487fa831885857f09de9b3b6ded6d8cb"
+      },
+      {
+        "path_at_capture": "config/.hydra/overrides.yaml",
+        "path": "config/.hydra/overrides.yaml",
+        "sha256_before": "a2580cbb949b91eb0d4b07782716fae9373dee78a5495bfe7e95d3b97a5c289a",
+        "sha256_after": "c8fd609769af897ec25c7f26fc92a6ac6efcce80b03b4cd592e509d9957a4bdd"
+      },
+      {
+        "path_at_capture": "idea_source/examples/idea_trainer/run_awm_opsd_qwen3_8b.sh",
+        "path": "idea_source/examples/idea_trainer/run_awm_opsd_qwen3_8b.sh",
+        "sha256_before": "23cc2efa00e001c6ba8c4491e309234e36888919247efe324aafdb81fd2bb8b0",
+        "sha256_after": "f31506d481f9b5512976064ba3670e458271709d4c8de90ceee61430a7982024"
+      },
+      {
+        "path_at_capture": "idea_source/examples/idea_trainer/run_awm_opsd_qwen3_8b_test.sh",
+        "path": "idea_source/examples/idea_trainer/run_awm_opsd_qwen3_8b_test.sh",
+        "sha256_before": "e055550ce5b27d96d287f93aafe107214bc634034d19d4a3e37ec4615bc8c334",
+        "sha256_after": "2cd04a9a7baf73d0230065b2ed653fc453bc575c260c38b21d8efda8df808156"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/awm/launch_qwen35_servers.sh",
+        "path": "idea_source/scripts/awm/launch_qwen35_servers.sh",
+        "sha256_before": "66bcf2d466d77e4f8681df29ec6dd5adb13d8a0200a0d5d83aeab4f435f149ee",
+        "sha256_after": "d7b9d1aa6ec8718f479a0965a602706b3f91ed9f2da34e83a6605674c0d4bf13"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/awm/launch_qwen38_skill_server.sh",
+        "path": "idea_source/scripts/awm/launch_qwen38_skill_server.sh",
+        "sha256_before": "b3f0dc68594dd03fdd6c6dbbe28ff32899bb6f3709297055559a4b5bc390beba",
+        "sha256_after": "270ec96b1c1dd3b651c7951fe979b6032d78b8a12fdd769ccde1c10dbafd51ab"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/awm/launch_qwen3_8b_checkpoint_servers.sh",
+        "path": "idea_source/scripts/awm/launch_qwen3_8b_checkpoint_servers.sh",
+        "sha256_before": "10f40a2f654cbffe6ed6abe20ac5d14d03efe528a59366cfd6b7959732d28bd4",
+        "sha256_after": "95dd254cc0eadf57288d14966a3459a1588b0e7d68f083c8e2a3b2267cb94d81"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/sft/awm/extract_skills_from_rollouts.py",
+        "path": "idea_source/scripts/sft/awm/extract_skills_from_rollouts.py",
+        "sha256_before": "29a46eb7887c2e1c499fa6988fcaf53bb4a0faa0033b7e5d4190ba59274ec807",
+        "sha256_after": "0998276f6440adc461852639e326dec7d0e104573a5753fe1f6253348ef6b9d0"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/sft/awm/save_original_qwen3_checkpoint0.py",
+        "path": "idea_source/scripts/sft/awm/save_original_qwen3_checkpoint0.py",
+        "sha256_before": "00997ebb6ec7bdd2c78cdd8d959ca0eb28284de64fb19658de6eadb51355a9cb",
+        "sha256_after": "740213c1a0d1fc91c4943c188f7d2421b33bc749aeb4831bf850a84984fd04ad"
+      },
+      {
+        "path_at_capture": "idea_source/scripts/sft/awm/test_qwen3_8b_awm_checkpoint.py",
+        "path": "idea_source/scripts/sft/awm/test_qwen3_8b_awm_checkpoint.py",
+        "sha256_before": "a55d63848404aa1d933814375b21f7a87477d7d2974b88af6a2e77b5f59626f5",
+        "sha256_after": "2ebd6eceb0929b8d6445393cf5baafcf09066fb60ccc745766ef77b2bf7c02ce"
+      },
+      {
+        "path_at_capture": "idea_source/tests/kill_github_tests.sh",
+        "path": "idea_source/tests/kill_github_tests.sh",
+        "sha256_before": "7da9d32b9deccd59c71f40d515186ef66170d1749e95b8242cb9936acaf2ef76",
+        "sha256_after": "53e1e9cf1f9a695096828fcd374ce619e9527336720ebe3f7f1a521cd5335a09"
+      },
+      {
+        "path_at_capture": "idea_source/tests/test_qwen3_8b_awm_skill_sft_vllm_service.py",
+        "path": "idea_source/tests/test_qwen3_8b_awm_skill_sft_vllm_service.py",
+        "sha256_before": "0dea5227a1a87a861fc42cbb6e10cc50da38e2804fc2175e9107ea6be6c33b2c",
+        "sha256_after": "67667a0031198f1d4db6a439ec7fd2f90f8a040b3bfdfce1a79c2dd0f900a6f5"
+      },
+      {
+        "path_at_capture": "idea_source/tests/test_qwen3_8b_awm_skill_vllm.py",
+        "path": "idea_source/tests/test_qwen3_8b_awm_skill_vllm.py",
+        "sha256_before": "750dc3f189e5f01aaaf13e52f370bf8d7e2705a8d933d9987f3565e670507b3d",
+        "sha256_after": "9d215581113a75358e119410b384dcef07e7ada94bfc3d3cf1c760bd7b4e612d"
+      },
+      {
+        "path_at_capture": "idea_source/tests/watch_awm_checkpoints.sh",
+        "path": "idea_source/tests/watch_awm_checkpoints.sh",
+        "sha256_before": "cefb5eacf9c48c5cfdb26a20c62e926b88faf26be08cf9f676b8cb2285aa2946",
+        "sha256_after": "7e5875492d1134bebce64026efb4fe91bf86630d3a8bb97df3351a72f43065c9"
+      },
+      {
+        "path_at_capture": "idea_source/vllm_model/vllm_model.sh",
+        "path": "idea_source/vllm_model/vllm_model.sh",
+        "sha256_before": "1975a275880dbb7d48405833d49615c55f931432f3fda86f875e74a1be011a9b",
+        "sha256_after": "50483a54a8d1fdaee34a46a5e4c52046b4f7e62e3bdd17957050a0fa1f014ce6"
+      },
+      {
+        "path_at_capture": "idea_source/vllm_model/vllm_model_ours.sh",
+        "path": "idea_source/vllm_model/vllm_model_ours.sh",
+        "sha256_before": "2658a495487e0c2cf1661797f989946ef8799982ffb306da435d3486a1d8697a",
+        "sha256_after": "03c65e6b50953a905920596cd3601d3fad7f94ceee11db3d53dec66518e84b51"
+      },
+      {
+        "path_at_capture": "idea_source/vllm_model/vllm_model_sft_v1.sh",
+        "path": "idea_source/vllm_model/vllm_model_sft_v1.sh",
+        "sha256_before": "95f95c289fd83fbe00948ef4b98469125c403f63f19dae0ebd91794e03df6c19",
+        "sha256_after": "b6a25b0d0c306e4749a21a0fac745f8b56ee61c58d2d224d19a517015996d0cc"
+      },
+      {
+        "path_at_capture": "logs/wandb/run-20261011_112547-wszt4s3y/files/wandb-metadata.json",
+        "path": "logs/wandb/run-20261011_112547-wszt4s3y/files/wandb-metadata.json",
+        "sha256_before": "be0f116d9002700ae4e1451f6a53a8a89059846ba83017a7d7db1410c3f4ce11",
+        "sha256_after": "c06fceb13d56fbfd41a5e5cd239de4d3b40f9cb378ff0ae5bb256fe585730344"
       }
     ]
   }

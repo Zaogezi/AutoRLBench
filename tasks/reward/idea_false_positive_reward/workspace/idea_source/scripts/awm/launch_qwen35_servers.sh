@@ -4,7 +4,7 @@ set -euo pipefail
 # Launch one OpenAI-compatible Qwen3.5-9B vLLM server per GPU.
 # This script is intended to be run inside persistent tmux panes.
 
-MODEL_PATH="${MODEL_PATH:-/local/user/Qwen3.5-9B}"
+MODEL_PATH="${MODEL_PATH:-/workspace/historical/Qwen3.5-9B}"
 MODEL_NAME="${MODEL_NAME:-qwen35-9b}"
 BASE_PORT="${BASE_PORT:-8020}"
 MAX_NUM_SEQS="${MAX_NUM_SEQS:-16}"

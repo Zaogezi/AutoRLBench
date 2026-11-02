@@ -26,7 +26,7 @@ AWM_DATA_ROOT="${AWM_DATA_ROOT:-/workspace/data/AgentWorldModel-1K}"
 AWM_PYTHON="${AWM_PYTHON:-$AWM_ROOT/.venv/bin/python}"
 DATA_DIR="${DATA_DIR:-$AWM_DATA_ROOT/verl}"
 OUTPUT_DIR="${OUTPUT_DIR:-$PROJECT_ROOT/outputs/awm_opsd_qwen3_8b_step693_wandb_v5}"
-CHECKPOINT_DIR="${CHECKPOINT_DIR:-/local/user/models/opsd-tool/awm_opsd_qwen3_8b_step693_wandb_v5}"
+CHECKPOINT_DIR="${CHECKPOINT_DIR:-/workspace/outputs}"
 
 N_GPUS_PER_NODE="${N_GPUS_PER_NODE:-8}"
 TRAIN_BATCH_SIZE="${TRAIN_BATCH_SIZE:-16}"
@@ -81,7 +81,7 @@ export TOKENIZERS_PARALLELISM=false
 # WANDB_MODE=online|offline|disabled, and WANDB_API_KEY.
 export WANDB_PROJECT="${WANDB_PROJECT:-agent_world_model}"
 export WANDB_NAME="${WANDB_NAME:-opsd_qwen3_8b_step715_skill_teacher}"
-export RAY_TMPDIR="${RAY_TMPDIR:-/local/user/ray}"
+export RAY_TMPDIR="${RAY_TMPDIR:-/workspace/historical/ray}"
 mkdir -p "$RAY_TMPDIR"
 export NCCL_ASYNC_ERROR_HANDLING="${NCCL_ASYNC_ERROR_HANDLING:-1}"
 export NCCL_IB_DISABLE="${NCCL_IB_DISABLE:-1}"
