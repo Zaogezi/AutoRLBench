@@ -1,0 +1,45 @@
+{
+  "reason": "Unrelated upstream contribution policy, serving/SFT tooling and test utilities",
+  "removed": [
+    {
+      "path": "verl/AGENTS.md",
+      "sha256": "5fdec7a5182a29335088b200caf43c59a8fb5226de228915126a54bfbaa8739f"
+    },
+    {
+      "path": "verl/docs/contributing/editing-agent-instructions.md",
+      "sha256": "a0baf5ed2d21e7f6ccb7b1386d60a7b88d1c254fe03576664033ac2bd74887de"
+    },
+    {
+      "path": "verl/examples/tuning/README.md",
+      "sha256": "3656aa9d841f4cc5d2e378f0de3ccee058193bc635ec216e5623c14be5a5324e"
+    },
+    {
+      "path": "verl/examples/tuning/lora/run_qwen2_5_vl_7b_fsdp.sh",
+      "sha256": "8baf348aff934754a3da910182af1709daabf2815102fa130196edbc69f767b1"
+    },
+    {
+      "path": "verl/examples/tuning/lora/run_qwen3_30b_a3b_megatron.sh",
+      "sha256": "6dbb4d1abadc25670ae9e37192fa57b7b2355adbc4e162969d8ea7f6e736fc0e"
+    },
+    {
+      "path": "verl/examples/tuning/lora/run_qwen3_8b_from_adapter_fsdp.sh",
+      "sha256": "3d627b6dfa9fb6d3490d41b6ed1ff662355b7a0424c3ae00e73a33817d666015"
+    },
+    {
+      "path": "verl/examples/tuning/lora/run_qwen3_8b_fsdp.sh",
+      "sha256": "f1235b8b005eafbbfda6c5e0a9774b5ad886f533eac7aae58896571d265bbf65"
+    },
+    {
+      "path": "verl/examples/tuning/lora/run_qwen3_8b_merge_fsdp.sh",
+      "sha256": "ee3fe3712e5f0b1a908eb8c39d0c855f45f44ac9005a6ad10e42beabad2b5efa"
+    },
+    {
+      "path": "verl/examples/tuning/scaling/run_qwen2_5_32b_megatron.sh",
+      "sha256": "89b74aa5c02c30f3a7d7f2c2b8fc02fec2d20af61c9811cf73ccf4606f4a9e81"
+    },
+    {
+      "path": "verl/examples/tuning/scaling/run_qwen2_5_72b_fsdp.sh",
+      "sha256": "1aad04caa192ba3eabffd4422fbb55664f1453f3160ca5d2de1b14a005b0cb92"
+    }
+  ]
+}
