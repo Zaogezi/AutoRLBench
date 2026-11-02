@@ -1,6 +1,6 @@
 # Repair the training experiment
 
-Investigate the unhealthy verl experiment in `/workspace`, then repair the source
+Investigate the staged verl experiment in `/workspace`, then repair the source
 or configuration. There is no source-file whitelist. Preserve unrelated behavior.
 Explain the root cause, evidence, and repair in `/workspace/report.md`.
 

@@ -22,7 +22,7 @@ algo = "GRPO, full-parameter FSDP"
 script = "scripts/train.sh"
 
 [environment]
-image = "verl_policy_ratio_recomputes_old_logprob"
+image = "verl_policy_ratio_recomputes_old_logprob_clean_workspace"
 
 [environment.env]
 NVIDIA_VISIBLE_DEVICES = "all"
