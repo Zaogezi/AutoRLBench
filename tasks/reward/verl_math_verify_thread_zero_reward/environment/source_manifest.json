@@ -100,5 +100,2543 @@
   "dropped_from_frozen_evidence": [
     "W&B run-*.wandb binaries and latest-run (history exported to outputs/wandb-history.jsonl)",
     "rollout dumps other than steps 1, 50, 100; validation dumps other than steps 0, 50, 100"
-  ]
+  ],
+  "workspace_slimming": {
+    "reason": "Omit upstream CI, container recipes, framework regression suites and unrelated examples from the diagnosis snapshot.",
+    "preserved": [
+      "verl/** production modules",
+      "examples/data_preprocess/**",
+      "examples/tuning/**",
+      "scripts/**",
+      "docs/**",
+      "AGENTS.md and linked policy guides",
+      "LICENSE",
+      "Notice.txt",
+      "setup.py",
+      "pyproject.toml",
+      "all frozen evidence and task launch scripts"
+    ],
+    "removed_files": [
+      {
+        "path": "verl/.github/CODEOWNERS",
+        "sha256": "d18a54d67ceeb9b12bd8b1dd7c62a98ea843845abc2e58a5281cc7712213f76b",
+        "bytes": 1294
+      },
+      {
+        "path": "verl/.github/dependabot.yml",
+        "sha256": "d02cc711acca76ded8729ab7bf33d456e379a255fbc37e6ba4c20d04ccbd9cf8",
+        "bytes": 245
+      },
+      {
+        "path": "verl/.github/ISSUE_TEMPLATE/bug-report.yml",
+        "sha256": "ea34159d2f40b702624891de3bf4b663845a0ddb9fbd26fc22cbadb7591cedf4",
+        "bytes": 2304
+      },
+      {
+        "path": "verl/.github/ISSUE_TEMPLATE/config.yml",
+        "sha256": "0bea552f4b6528f7888e7076ff2bb1bdc9e3e81d11d1f933332c121eaa86b055",
+        "bytes": 40
+      },
+      {
+        "path": "verl/.github/ISSUE_TEMPLATE/feature-request.yml",
+        "sha256": "dcc4526668863cd4752344c5a1d72cfb68f7983c0b6e1e7e6ffee09e4f657a16",
+        "bytes": 1205
+      },
+      {
+        "path": "verl/.github/PULL_REQUEST_TEMPLATE.md",
+        "sha256": "38cdeca3e7b209312cbb564e97cfc4d76ac4372cf6e1b1e27fecfcdd45b66e6f",
+        "bytes": 2920
+      },
+      {
+        "path": "verl/.github/workflows/.stash/e2e_ppo_trainer_torchtitan_vllm.yml",
+        "sha256": "d6107fffce8c8a37d25b282bbd27c029a19a5752165aba8d01ca91a050d9e47c",
+        "bytes": 8212
+      },
+      {
+        "path": "verl/.github/workflows/check-pr-title.yml",
+        "sha256": "b9a179c8141104c0cc5b306d999bf5a125f596b1cf2c3b7dc22001466c3a942a",
+        "bytes": 2494
+      },
+      {
+        "path": "verl/.github/workflows/cpu_unit_tests.yml",
+        "sha256": "44639aecef4e64cfb7c780d822551668540f31e97a85d28ddd646ee7ac6b032b",
+        "bytes": 4679
+      },
+      {
+        "path": "verl/.github/workflows/doc.yml",
+        "sha256": "7afce0534444ebf6e28c5ae541c052deccd0b7fe38fc612cce84afef8b66e2d1",
+        "bytes": 4277
+      },
+      {
+        "path": "verl/.github/workflows/docker-build-ascend-a2.yml",
+        "sha256": "045610e4e803b91b93aa4a561748f7b70a8d452e177c6f74edefaa7bad578aa4",
+        "bytes": 9085
+      },
+      {
+        "path": "verl/.github/workflows/docker-build-ascend-a3.yml",
+        "sha256": "5a542d9e739e53663c528199a24a21aea4200dcfeee13d6b30631511fd3af9a1",
+        "bytes": 9081
+      },
+      {
+        "path": "verl/.github/workflows/docker-build-ascend-sglang-a2.yml",
+        "sha256": "f4bfd8e9cf55feefac77ac493ee6ce92a11b3886108c4dc776e005460ff04b35",
+        "bytes": 2603
+      },
+      {
+        "path": "verl/.github/workflows/docker-build-ascend-sglang-a3.yml",
+        "sha256": "6a1e58009a2584d6ceb4ea77bf9e357057cadb489b11fd3f28e82290c1eb5496",
+        "bytes": 2601
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ascend.yml",
+        "sha256": "caa13378dbc805884d2024c690fea6f3b77e97eb9b4085465b95eeef6998e614",
+        "bytes": 10807
+      },
+      {
+        "path": "verl/.github/workflows/e2e_fully_async_policy.yml",
+        "sha256": "24b8da82abcbf60f8cd05f0e192a89d3c40312186ea3a21ce12440f9ee294081",
+        "bytes": 6920
+      },
+      {
+        "path": "verl/.github/workflows/e2e_fully_async_policy_ascend.yml",
+        "sha256": "dba0c0165308f624bb5e56129d81f9f8ae7176e932cd1dff05f779bee3adc527",
+        "bytes": 7495
+      },
+      {
+        "path": "verl/.github/workflows/e2e_fully_async_policy_opd.yml",
+        "sha256": "174c51ce2cfe74bd3da2056c4c6dfe14d8cd68689c3418fcc547ae1ef3cf6df7",
+        "bytes": 3854
+      },
+      {
+        "path": "verl/.github/workflows/e2e_fully_async_policy_trtllm.yml",
+        "sha256": "43f72b6629872eb02d3ce52ef462b4266bd50ebe6915cca20d0b088d70e0f2d4",
+        "bytes": 7257
+      },
+      {
+        "path": "verl/.github/workflows/e2e_one_step_off_policy.yml",
+        "sha256": "ca582b5d1648faf089586fcbaf9830df621d587cd11294da98336abd335a83b0",
+        "bytes": 6972
+      },
+      {
+        "path": "verl/.github/workflows/e2e_one_step_off_policy_ascend.yml",
+        "sha256": "33132766272af9067dd66bf898ca651b2624c13b4eda1a42048490ded405d815",
+        "bytes": 7559
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_grpo_trainer_trtllm.yml",
+        "sha256": "1c178de085bee4f562376c6f2343f76ed5af7671bfc6696f16d4536bfc6a4256",
+        "bytes": 13933
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer.yml",
+        "sha256": "eff8c07bf14ecfefdb691251876a4327d5bac770c753c0a2a8b7671e00ca9331",
+        "bytes": 2266
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_sglang.yml",
+        "sha256": "1bb986b036d449af688f38ee11095879912495b0bd48a29a93e30b0b993ff1b7",
+        "bytes": 9308
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_sglang_2.yml",
+        "sha256": "0009be4cb874bd374805a916c647a66a81979b6442e22c8b8bb2367999c89721",
+        "bytes": 8829
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_sglang_2_ascend.yml",
+        "sha256": "c2a2cc5c17d0385f1eb44b4bf9c545d6a0a6f38c1da821d34b7bbed12a847c82",
+        "bytes": 5953
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_sglang_ascend.yml",
+        "sha256": "3415e74ffee685d39f545ce5b984a895529f591e8f82b2a297081db38b8218ca",
+        "bytes": 9955
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_vllm.yml",
+        "sha256": "6fdb8afb06f996973783318b51c7427cbeefc422dbb186441f1a11fc3c0d3323",
+        "bytes": 11675
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_vllm_2.yml",
+        "sha256": "77451462a0a3dbb12f724ee627552d1f4111afd290f8fea803f80e04cf46473f",
+        "bytes": 16839
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_vllm_2_ascend.yml",
+        "sha256": "e70024feaf48333f481d6afe45f7121eb6caaac6f7873a119af3fc14271db6a2",
+        "bytes": 11059
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_megatron_vllm_rocm.yml",
+        "sha256": "ff7be69f83f2ee3f4365a4077e079717cf9eba2c0252ea028a2ddb4a54a87bea",
+        "bytes": 12391
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_veomni_vllm.yml",
+        "sha256": "9adb714f5f8a2c2060384925291dcd92987c9038ed0481a68e8dbe8794f91eff",
+        "bytes": 6239
+      },
+      {
+        "path": "verl/.github/workflows/e2e_ppo_trainer_veomni_vllm_ascend.yml",
+        "sha256": "cab41f51744faa1cbf9aba913505041c6261fb692ebe475bd31ca820e95753a8",
+        "bytes": 5550
+      },
+      {
+        "path": "verl/.github/workflows/e2e_sft_llm.yml",
+        "sha256": "f643f27bc11aad5aaccf48bf3656d02572b01725d922c8c684c2bdbc736ee074",
+        "bytes": 6579
+      },
+      {
+        "path": "verl/.github/workflows/e2e_sft_llm_ascend.yml",
+        "sha256": "235de4ac722ac0b31b508319edcc0f8ff53bcb2a1a65cbe72c1d489748e2168c",
+        "bytes": 7402
+      },
+      {
+        "path": "verl/.github/workflows/e2e_sft_vlm.yml",
+        "sha256": "e995ccf8e9c2c0b24be92fc5378bda058b494e8845e7436ed71bec2cdb40b3c0",
+        "bytes": 5556
+      },
+      {
+        "path": "verl/.github/workflows/gpu_unit_tests.yml",
+        "sha256": "eb1181d802a46c508eaca50d4f24366d9e202efd32fddeac0d00c552ec7ee254",
+        "bytes": 5769
+      },
+      {
+        "path": "verl/.github/workflows/model.yml",
+        "sha256": "d24a9af3c53c60ab355d963f5179168ff9e5333b77b2b7eb893c98516a7ee2ac",
+        "bytes": 8049
+      },
+      {
+        "path": "verl/.github/workflows/model_ascend.yml",
+        "sha256": "4b981aff913bc77c5a67ad0a24ca8f6975a6dc2e3f116e2d6237d407d1c67e30",
+        "bytes": 5793
+      },
+      {
+        "path": "verl/.github/workflows/nightly_ascend.yml",
+        "sha256": "dac04d21bbb5086f78fd544e6198fbe4db578bc56084d3e16c31def19e826f4e",
+        "bytes": 28707
+      },
+      {
+        "path": "verl/.github/workflows/nightly_ascend_multinode.yml",
+        "sha256": "eabb3a5f618a77d4a6938ed2b98771e7361cc94a9c4e1319efe73489a466798a",
+        "bytes": 15514
+      },
+      {
+        "path": "verl/.github/workflows/npu_unit_tests.yml",
+        "sha256": "cd8198355cff138faaa5cd6f2c448ae5601f619478493bcdbfaf3abc418d5346",
+        "bytes": 5425
+      },
+      {
+        "path": "verl/.github/workflows/pre-commit.yml",
+        "sha256": "207486cd6923cd813f8ec18a23fb500268d5db82bd4910d836a1b1a099704800",
+        "bytes": 1204
+      },
+      {
+        "path": "verl/.github/workflows/precommit-autofix.yml",
+        "sha256": "bd4eba95632d30445d554036da75e8196648fc222298e8f477054f79d51ae503",
+        "bytes": 1257
+      },
+      {
+        "path": "verl/.github/workflows/README.md",
+        "sha256": "d38c69b449353eae04d0e104bf7491a824e16c898dd74c2e5a448b7bde9c3e9f",
+        "bytes": 2407
+      },
+      {
+        "path": "verl/.github/workflows/reward_model_sglang.yml",
+        "sha256": "d655497262020ce17bf1b1e63b83ce14c4da18c7cdfd91ac83a3998e57c47b3a",
+        "bytes": 5429
+      },
+      {
+        "path": "verl/.github/workflows/reward_model_sglang_ascend.yml",
+        "sha256": "19e184b588d323ad11868d0d2618f5a53e1e89b4b71207b57498669fc7fbe419",
+        "bytes": 5573
+      },
+      {
+        "path": "verl/.github/workflows/reward_model_vllm.yml",
+        "sha256": "45de81c8703f7ae6959f82357aa66881b7b49953a8204a7fe15ecc548cd5bdbe",
+        "bytes": 5599
+      },
+      {
+        "path": "verl/.github/workflows/reward_model_vllm_ascend.yml",
+        "sha256": "e5fad39a8f7d4066e2a63a33dd511ee653c99ade7889f2e3dacd366bfc7e0b52",
+        "bytes": 4707
+      },
+      {
+        "path": "verl/.github/workflows/sanity.yml",
+        "sha256": "a070b732d3743cd7e445303933e8f6eef521a3eda48bfc5e1ec0d9143099b487",
+        "bytes": 3627
+      },
+      {
+        "path": "verl/.github/workflows/scorecard.yml",
+        "sha256": "36266f3a286cb694553f7e038c46564dcbb5d15673355d88d7f21dedba52eed5",
+        "bytes": 2759
+      },
+      {
+        "path": "verl/.github/workflows/secrets_scan.yml",
+        "sha256": "51bb21a307f1b215e18a4df10c1d6b3fe9b27d931bcb7590e52e8867b1ea1ef7",
+        "bytes": 486
+      },
+      {
+        "path": "verl/.github/workflows/sgl.yml",
+        "sha256": "fb3c9cfb2207ca75f537433353e6eb1769bd5270f74dcf827dfb1e2b667d6011",
+        "bytes": 6567
+      },
+      {
+        "path": "verl/.github/workflows/sgl_ascend.yml",
+        "sha256": "b5fecaac434b46a3b394591dff266a35c37e29da56934e76ccc52c3d5495bb8f",
+        "bytes": 5586
+      },
+      {
+        "path": "verl/.github/workflows/type-coverage-check.yml",
+        "sha256": "f669a7c0ad30848b79ce90ea87115492d75f491e2804ae5ec4e7edb9783a7aa0",
+        "bytes": 937
+      },
+      {
+        "path": "verl/.github/workflows/vllm.yml",
+        "sha256": "b782f337f0edeb210c61b1bef1853f9c91053c0a12f92617f6b12d4c2772f1d9",
+        "bytes": 7427
+      },
+      {
+        "path": "verl/.github/workflows/vllm_ascend.yml",
+        "sha256": "4b858805805539e42c6fdaf2e9dfc8ab7040f75be55f4531bf41dd909367694f",
+        "bytes": 4790
+      },
+      {
+        "path": "verl/.gemini/config.yaml",
+        "sha256": "e11184708a40ad08d565e47d1579054ca2c08094df34ddcc992d8a75787fb8d9",
+        "bytes": 207
+      },
+      {
+        "path": "verl/.claude/skills/issue",
+        "sha256": "4b50b36d0967722295724ee7c9c7f43fb1ab58575e55712e7882da8eb26ebf2d",
+        "bytes": 25
+      },
+      {
+        "path": "verl/.claude/skills/pr",
+        "sha256": "e509c85f8cc6730f3b25a7b4b207f63b57d954cd511848dd31ad37dba96c7fb7",
+        "bytes": 22
+      },
+      {
+        "path": "verl/.codex/skills/issue",
+        "sha256": "4b50b36d0967722295724ee7c9c7f43fb1ab58575e55712e7882da8eb26ebf2d",
+        "bytes": 25
+      },
+      {
+        "path": "verl/.codex/skills/pr",
+        "sha256": "e509c85f8cc6730f3b25a7b4b207f63b57d954cd511848dd31ad37dba96c7fb7",
+        "bytes": 22
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend.sglang_8.3.rc1_a2",
+        "sha256": "7a03c3fc5003f6e7f4b5524efca06393e6e946ab601a43279d1b4e1996e59ed5",
+        "bytes": 3787
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend.sglang_8.3.rc1_a3",
+        "sha256": "a84ecd4cd05d83bffcd43c7375095185abc87d431a7e458030efe5d54ded3d03",
+        "bytes": 3572
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend.sglang_8.5.0_a2",
+        "sha256": "2266d54644159b86c0724ab3e18ed250b17f1bb9578735b7517417ad6d39f254",
+        "bytes": 3400
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend.sglang_8.5.0_a3",
+        "sha256": "5d1344983fc45989e65ec75be9905ba683a3d12e277be4e394671749565fba43",
+        "bytes": 3395
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.2.rc1_a2",
+        "sha256": "8d81b49a104b3208c9bdd7ff8a18cbc3802683e76bc3e6b48d0f2cd5b3cb3942",
+        "bytes": 2580
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.2.rc1_a3",
+        "sha256": "4465a4eab71748e2320097d4370d2533a30cfea86f328edcf9ceca7cc0a49f7f",
+        "bytes": 2578
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.3.rc1_a2",
+        "sha256": "38512a6dd8aee8b9667128769082ca8d5c5f1c0ee19537d28b6665d698fbdff7",
+        "bytes": 2799
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.3.rc1_a3",
+        "sha256": "d391ab274ed4c47b73fd9c65694e24a5e8dd7574ad9a1a43608a066dfaabb9a4",
+        "bytes": 2797
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.0_a2",
+        "sha256": "300c2b9442202140d41df750f375bc75d7e05bd165755a7db8902e04b21473d8",
+        "bytes": 3119
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.0_a2_v0.7.1",
+        "sha256": "e4bb00b2638e39002f9476acd57b4f9fa1234f3f275df59ae44dfbbf1b3d0b0b",
+        "bytes": 3215
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.0_a3",
+        "sha256": "c054e60a191f1d42bebe5257acf7e71ac7fc7e166cdd27021b803ad88031d829",
+        "bytes": 3413
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.0_a3_v0.7.1",
+        "sha256": "0f6b5d4f8b34f8dec2d7ee15b26de9263055bf1d484bb4a0b494922475fea080",
+        "bytes": 3208
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.2_a2_qwen3-5",
+        "sha256": "dae6b238e06e8cb4f10676537f86dc17b00151a8e1619307b590a60c697c13da",
+        "bytes": 5519
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_8.5.2_a3_qwen3-5",
+        "sha256": "378a18e8affbc8d32a5225476c6d59cb1837e8e525de385926ea0c9d514a751a",
+        "bytes": 5491
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_9.0.0_a2",
+        "sha256": "def91c6ebf21045f1847ea623350c67d265287474e2f6eb0a821b4351be0f617",
+        "bytes": 3786
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_9.0.0_a2_v0.8.0",
+        "sha256": "9dd8186814d0e35d59cb76014878b25cf8fe2565a2e0f9511c4b6c6296a7b882",
+        "bytes": 4166
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_9.0.0_a3",
+        "sha256": "f10532dc0a3ca5aeca17ee02ed31ebddfcaf4414d0c0fe7e559a80991e658d35",
+        "bytes": 3787
+      },
+      {
+        "path": "verl/docker/ascend/Dockerfile.ascend_9.0.0_a3_v0.8.0",
+        "sha256": "9b76219a394e8b9342f8c7c1809d52d9376a9c745b58b2ed29301a7060dd0d4a",
+        "bytes": 4167
+      },
+      {
+        "path": "verl/docker/aws/Dockerfile.extention.awsefa",
+        "sha256": "2cc67fe51d8b44c980cec6c05f2203fcaffa0fab65dba0899466c9e85c5cd281",
+        "bytes": 2105
+      },
+      {
+        "path": "verl/docker/aws/Dockerfile.ngc.vllm0.8.sagemaker",
+        "sha256": "121e4ecfcf5246cd7c48c091dd613b5736845772991cd7a7c2a8d789379e8b7f",
+        "bytes": 1791
+      },
+      {
+        "path": "verl/docker/Dockerfile.isaaclab230",
+        "sha256": "39579d15b64a1c70a1282e33ee57a1be83ae7ae36032f16f47f6df3fd75e996e",
+        "bytes": 5353
+      },
+      {
+        "path": "verl/docker/Dockerfile.stable.sglang",
+        "sha256": "be480d65f4ff6a97d5f878d989d25327948d108e787f5a9b4444bab0f2250ebc",
+        "bytes": 4430
+      },
+      {
+        "path": "verl/docker/Dockerfile.stable.trtllm",
+        "sha256": "60a77c79a2e8f8afb9879d2deceb83c9f9471819328105bfc1f8899485d2ade0",
+        "bytes": 5632
+      },
+      {
+        "path": "verl/docker/Dockerfile.stable.vllm",
+        "sha256": "f1f96bc8be26211ca6aa26f1ec53ea9b8045dbde85a1b98f691a2956c249d177",
+        "bytes": 7769
+      },
+      {
+        "path": "verl/docker/README.md",
+        "sha256": "468991af58f63d63efc1df835d5c3819e7499d95cd0c832f2039f7f58c83ab03",
+        "bytes": 3340
+      },
+      {
+        "path": "verl/docker/rocm/Apptainerfile.rocm",
+        "sha256": "07eebc0f1bb2a0f569a92691eeeb9012343353aa436ffecd9e7574b1f18141e4",
+        "bytes": 1521
+      },
+      {
+        "path": "verl/docker/rocm/Dockerfile.rocm",
+        "sha256": "bfed222f2e1d7df99ab90d58ecc50c8df7c599c4bed2fef996ec8b72aff513e2",
+        "bytes": 7916
+      },
+      {
+        "path": "verl/docker/rocm/Dockerfile.rocm6",
+        "sha256": "3ffa766d5ef630bba3ae5cff53d20c2b4178bd685d5716989b74cfe0483ea473",
+        "bytes": 10460
+      },
+      {
+        "path": "verl/docker/rocm/Dockerfile.rocm_verl-0.3.0.post1",
+        "sha256": "d3f93e7eeff99cd5014c29dd270acd98b234fe5ca656c4d289797bbab4dae8ba",
+        "bytes": 1501
+      },
+      {
+        "path": "verl/docker/rocm/Dockerfile.rocm_verl-0.4.1",
+        "sha256": "857e95b5396ff3f1722d4e3d74e2b2a5b09b48ba731eb8a948c16e68fbaf0c27",
+        "bytes": 10482
+      },
+      {
+        "path": "verl/docker/rocm/README.md",
+        "sha256": "f839c6c62212a9d8ad600e9b45b5908ecba2ab3430a82dc55f236b3bce975a61",
+        "bytes": 4029
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.sglang.vllm.mcore0.12",
+        "sha256": "a858ef1f088e60d6dd277bc97ab98b4326d44220946bd3aafb212b874106a3f1",
+        "bytes": 1926
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.sglang.vllm.mcore0.12.deepep",
+        "sha256": "9e75c66ce3cfd8a7f33c9b3217eb45ee816b55af5a79104b822ae4654a0e2fc7",
+        "bytes": 3447
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.sglang.vllm.mcore0.13.preview",
+        "sha256": "c3062c5d6f758464f2ebd57c0708f54bd0a34531732a604326a1238fc30c2cb8",
+        "bytes": 3453
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.vllm.mcore0.12",
+        "sha256": "dfe05663d3806d14d045d8d6fa22ae32bd95c87a96d8f1c8d081e753aa1a2ce8",
+        "bytes": 2229
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.vllm.mcore0.12.deepep",
+        "sha256": "9591f0707e98ac98211df99753c07150920d037de18fb52ca9827d7119bd648c",
+        "bytes": 3750
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.app.vllm.mcore0.13.preview",
+        "sha256": "3f8d5762a4ba45a7a54f20ccae17b9df237ac88c2e66cccfbcad9558b5130b03",
+        "bytes": 3663
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/Dockerfile.base",
+        "sha256": "883be13169318512a773dd1d34d0d7a3c0a23b624a646b22c714c9674015fc27",
+        "bytes": 5477
+      },
+      {
+        "path": "verl/docker/verl0.4-cu124-torch2.6-fa2.7.4/README.md",
+        "sha256": "3aae6be6b3ad8ffefaea7238fee2ad8e4d4a2f065e75432c46b1aa396e1d5907",
+        "bytes": 1005
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/Dockerfile.app.sglang0.4.10.post2.mcore0.13",
+        "sha256": "8c1f48902cac6723a004e4b663669465e718a665c603b87c3262cb65d6ea5640",
+        "bytes": 1680
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/Dockerfile.app.sglang0.4.9.post6.mcore0.13",
+        "sha256": "dbcc48d2edf0f1666e87e8c79512b3e11647bf451ccd2376c9ed0d465f021c9a",
+        "bytes": 1679
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/Dockerfile.app.vllm.mcore0.13",
+        "sha256": "ba9c20b324162756d919e76fee9f3e429aa4b14c9d9848a6641bab70ff0dd441",
+        "bytes": 1575
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/Dockerfile.app.vllm.mcore0.15",
+        "sha256": "7900b455d53bf37afb5b7b3abc479a56516831f1d8c5018b199b5ec887d2fc50",
+        "bytes": 1627
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/Dockerfile.base.torch2.7.1",
+        "sha256": "d2a1e990ea0fa437dd427571664b3743c63f6534d02d5406093b88c5867d5525",
+        "bytes": 6184
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7-fa2.7.4/README.md",
+        "sha256": "068c1b77cc8e9cdd8f064819d34c05280ea774a1481fe803404445c1932b207f",
+        "bytes": 721
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7.1-fa2.8.0/Dockerfile.app.sglang.mcore0.12",
+        "sha256": "8b1d39b61a50689cbe3f393346341af3cf06561f06cd49e21973a8ed9a78a9e4",
+        "bytes": 1724
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7.1-fa2.8.0/Dockerfile.app.sglang.mcore0.13.preview",
+        "sha256": "9c9fa5d358a5053553f13b7281f619a7a97ef9341ce71574babde22f4c1fbdc7",
+        "bytes": 1732
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7.1-fa2.8.0/Dockerfile.base",
+        "sha256": "238004d426ba990432cff24cb961b192d45ab4b3f20b489261f62d858fb8a742",
+        "bytes": 6053
+      },
+      {
+        "path": "verl/docker/verl0.5-cu126-torch2.7.1-fa2.8.0/README.md",
+        "sha256": "08400eca23ce3cd2975c089f455d0be114b58fec093197f00389d147da1b0018",
+        "bytes": 621
+      },
+      {
+        "path": "verl/docker/verl0.5-preview-cu128-torch2.7.1-fa2.8.0/Dockerfile.app.sglang.megatron",
+        "sha256": "12847020a88b34db48ca19256419eb5587f245865a14d49ec69f75e7af34dfa3",
+        "bytes": 1691
+      },
+      {
+        "path": "verl/docker/verl0.5-preview-cu128-torch2.7.1-fa2.8.0/Dockerfile.base",
+        "sha256": "a50c08c55bb6a24c5683f2eb15a4d1b28bd39ac554430e56227efcd3d0807a1a",
+        "bytes": 4587
+      },
+      {
+        "path": "verl/docker/verl0.5-preview-cu128-torch2.7.1-fa2.8.0/README.md",
+        "sha256": "655ebed30032b1a4215c35fb4fc1fc22da60c4ad5e898635630924e3dfa6023b",
+        "bytes": 657
+      },
+      {
+        "path": "verl/docker/verl0.6-cu128-torch2.8.0-fa2.7.4/Dockerfile.app.sglang",
+        "sha256": "8a059284b944e9426a184a3c505f4fd21bdcefe3efe6262dfca7100bd2588e8c",
+        "bytes": 179
+      },
+      {
+        "path": "verl/docker/verl0.6-cu128-torch2.8.0-fa2.7.4/Dockerfile.base",
+        "sha256": "061730a1cc83b350aa433b53f3f068a40560896aaa1518033294f438befc02d2",
+        "bytes": 4068
+      },
+      {
+        "path": "verl/docker/verl0.6-cu128-torch2.8.0-fa2.7.4/Dockerfile.vllm011.mcore_gpt-oss",
+        "sha256": "af7c69a359e57a95f1365dfa8eb42e1ad04e6ed42262870f34cef782d31a11c1",
+        "bytes": 514
+      },
+      {
+        "path": "verl/docker/verl0.6.1-experimental/Dockerfile.sglang056exp",
+        "sha256": "55c0253823e5375333742813924b9bd4bd68a900eb2bb9712d9492ed05ff6336",
+        "bytes": 2696
+      },
+      {
+        "path": "verl/docker/verl0.6.1-experimental/Dockerfile.vllm012exp",
+        "sha256": "962212cf0dde4ec2808992e1841efb9db84e2c3fa8bec13a3e82a6860d80871d",
+        "bytes": 2667
+      },
+      {
+        "path": "verl/tests/__init__.py",
+        "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/__init__.py",
+        "sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/test_correctness_on_gpu.py",
+        "sha256": "c31c1e67b43143e5b1a4c0b08a4ecee42e6d0ae6de0a980ff15088aebdfad3af",
+        "bytes": 7682
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/test_correctness_on_npu.py",
+        "sha256": "1bee2594554aa1e406b169b9e9c1ab62cb13112a93c6ae98ca334fe40665f5a8",
+        "bytes": 6992
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/test_global_steps_on_cpu.py",
+        "sha256": "e2c8400dabd2106399145fbfa333945c0ee59cef699acfd05139d75a64761c92",
+        "bytes": 3130
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/test_special_server_adapter.py",
+        "sha256": "486784fc436ab30faa58b9df143aa2f7bc6953f8570e839439341ce5858151f7",
+        "bytes": 9862
+      },
+      {
+        "path": "verl/tests/checkpoint_engine/test_utils.py",
+        "sha256": "e4874b2774054f3bdaa3f2455f391f8e64156e2c233affa96dbdf56b2f2a3069",
+        "bytes": 7423
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/agent_utils.py",
+        "sha256": "67278e72ea9d18d57d18294ca50fb45923916e9bee1856b86a3f36586634172c",
+        "bytes": 5033
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/function_tool_examples.py",
+        "sha256": "0054a54b97ec7e9df87358d74feb4c7a489ec34a42afa413152563a2c1041bb9",
+        "bytes": 3087
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/qwen_vl_tool_chat_template.jinja2",
+        "sha256": "8d008a59edc04fc20708346e5b880753eb514aa1a9170acbf1fe963bc0e3dd60",
+        "bytes": 5927
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_agent_loop_extra_fields_schema_on_cpu.py",
+        "sha256": "596f0ceb98c6b523e5ee048aee49ae398088643696a44f44a8186b6f925a4108",
+        "bytes": 12707
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_audio_server_contract_on_cpu.py",
+        "sha256": "52615aa02cb220d2a61d30d01800aacefb66cdd7e65b3c31d25e7a563da2f641",
+        "bytes": 2890
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_basic_agent_loop.py",
+        "sha256": "83e3693450056556726c52ee06617e6ec8206029a3d2f08997aed2d4342abd68",
+        "bytes": 24329
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_call_tool_on_cpu.py",
+        "sha256": "f462175016b6fbb77019435d9b3617447f1cc1060e25f5d80c2c1a586d0bdba6",
+        "bytes": 7633
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_gpt_oss_tool_parser.py",
+        "sha256": "2e870a1b6515de80f8a4245bad0a6c1d1bc7f8e6a5009cea6e58dd969d456fcf",
+        "bytes": 1517
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_multi_modal.py",
+        "sha256": "c931490185361be483f89994c8f6173b1bac5997f838e74e5241392785b81c10",
+        "bytes": 18787
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_qwen3_tool_parser_on_cpu.py",
+        "sha256": "799e45680f9bb126ae8946ae966c417a41acb7b1b675e80c04f391ddda0a6f7e",
+        "bytes": 3282
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_standalone_rollout.py",
+        "sha256": "d01d1bd9b993d9ba360abc85d1d0a21a45d9f2222dcf501a17edd60004d2460c",
+        "bytes": 5226
+      },
+      {
+        "path": "verl/tests/experimental/agent_loop/test_tool_call_id_on_cpu.py",
+        "sha256": "167318000656fbc8b122650362cb0728a5a60b56761d700c1dc818f91bece10d",
+        "bytes": 6612
+      },
+      {
+        "path": "verl/tests/experimental/fully_async_policy/__init__.py",
+        "sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/experimental/fully_async_policy/test_async_genrm_config_on_cpu.py",
+        "sha256": "d3f35bf3541020bb9e94ca497f943855964605f8e59f82de7b7b3df19b0f9e72",
+        "bytes": 4015
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/reward_fn.py",
+        "sha256": "84200c044a0f10b466d23d4bb679d7d5780346175d059d3eea3b7d1b40e388c9",
+        "bytes": 3213
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/run_determinism_e2e_with_rm.py",
+        "sha256": "9f4cd350762fc5a398c5bb6a1ae5d9ad1edd8ab9c0c8c545a96e211ec094e3a0",
+        "bytes": 14563
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_agent_reward_loop_colocate.py",
+        "sha256": "fbb523ac43a1e646e73bfac1906897689d00916d4befbf26fcbd63a499a85376",
+        "bytes": 7123
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_agent_reward_loop_standalone.py",
+        "sha256": "17b4d66dcd4719cb191810cf710e86e15a9940f3755014c16adff4aa4dee0906",
+        "bytes": 4878
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_async_token_bucket_on_cpu.py",
+        "sha256": "6ed7dadeafdccbc64976b46d67843f2877444802df85afe9dcf650e6eb80445f",
+        "bytes": 9885
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_math_verify.py",
+        "sha256": "18712156aac31fecac97c19a1667029cc6c4943a30fbef907ce844ca3d346ee5",
+        "bytes": 3706
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_rate_limited_reward_manager_on_cpu.py",
+        "sha256": "a472216faababf6be014449958e7c36411df25fc469864e526b02ed3b0d93b40",
+        "bytes": 18899
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_reward_model_disrm.py",
+        "sha256": "8326f3ab0f2f60b7cd3c789f6312d187baaacb4ca817752808615df7b5f29362",
+        "bytes": 6046
+      },
+      {
+        "path": "verl/tests/experimental/reward_loop/test_reward_model_genrm.py",
+        "sha256": "2c018b1122395f90aaf4e836adc450bbc103306eb7570d45ef02a804f44b2aac",
+        "bytes": 6197
+      },
+      {
+        "path": "verl/tests/experimental/vla/test_sim_envs.py",
+        "sha256": "cc1c00e9fa23f33b2db52d1582a0360d01745def469e47c71d124dc92e546984",
+        "bytes": 4642
+      },
+      {
+        "path": "verl/tests/kill_github_tests.sh",
+        "sha256": "28e3028bd1a450f36250afcf6bafccb9587be873100d90bb262fd10bd833acbe",
+        "bytes": 1174
+      },
+      {
+        "path": "verl/tests/models/test_engine.py",
+        "sha256": "b2c8d27121a5bfea52da8cf4f3b3b9526dcf77ffcd164abc49d8b2e86b21f8a2",
+        "bytes": 27019
+      },
+      {
+        "path": "verl/tests/models/test_fsdp_no_padding_on_gpu.py",
+        "sha256": "ffccfc2a03afedc9fde83aaa1de87302d944d4e1817864f86c24f524f9089642",
+        "bytes": 6364
+      },
+      {
+        "path": "verl/tests/models/test_fused_kernels_ulysses_sp_on_cpu.py",
+        "sha256": "577c6822f1c06252fb435f2a0ac89fdebf7b31a97c1874bfab2ff87afd72c006",
+        "bytes": 10688
+      },
+      {
+        "path": "verl/tests/models/test_liger_vl_compat.py",
+        "sha256": "f0338946fb56e4acdf2b52bbf2e39916662465fccd1be85f9caf122f62daaeef",
+        "bytes": 3053
+      },
+      {
+        "path": "verl/tests/models/test_moe_zloss_per_token_loss.py",
+        "sha256": "f9d5909fe9eb7a4d8ae134e871103b14d0454945a1509ac9500a816dc7b7f155",
+        "bytes": 6764
+      },
+      {
+        "path": "verl/tests/models/test_tiled_mlp_accuracy.py",
+        "sha256": "26501642c39fdbcaa931d681d9fa077d040c6a86a3b400961b9137a79479eb4b",
+        "bytes": 6853
+      },
+      {
+        "path": "verl/tests/models/test_transformer.py",
+        "sha256": "4bcae410e585ce11a76d9a543304e2b44fbddc91d11cf1ea58dbdaf60235f424",
+        "bytes": 9760
+      },
+      {
+        "path": "verl/tests/models/test_transformers_ulysses.py",
+        "sha256": "213c3b96b51516493132d8560c95142dc580016230fe99609ab97b979aea9c11",
+        "bytes": 11408
+      },
+      {
+        "path": "verl/tests/plugin/__init__.py",
+        "sha256": "21533b4cc8fe1db903fd7b4a8d046de0480c671e6a467e5b3d890b8fa20e120a",
+        "bytes": 48
+      },
+      {
+        "path": "verl/tests/plugin/test_platform_abstraction.py",
+        "sha256": "95c80814aad0db0faa8f3e93c3c1dab9f8a5b78c1b1cefff6a3682d02f7193d4",
+        "bytes": 6130
+      },
+      {
+        "path": "verl/tests/README.md",
+        "sha256": "d4fabebdd0cadf7356a7e489896e7f44f0e1b08b5e34c175c189638b84196653",
+        "bytes": 1742
+      },
+      {
+        "path": "verl/tests/single_controller/__init__.py",
+        "sha256": "ced14be479d27e864cf3557c37d8abe00d2204ba6c030620bf48ea85e25a5921",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/single_controller/base/test_decorator.py",
+        "sha256": "684dc453812e5877a5d76d7ae56be566ae3f7b500479d18c3631b02b40fe7eec",
+        "bytes": 2394
+      },
+      {
+        "path": "verl/tests/single_controller/check_worker_alive/main.py",
+        "sha256": "8572fd7f2b38f15aa73ea30d69406352ab76123cadd88f7a3ed5231a436d3b5c",
+        "bytes": 1866
+      },
+      {
+        "path": "verl/tests/single_controller/detached_worker/client.py",
+        "sha256": "dda43f7f05ff2b5b973d8188f292e1dda681f45ae80a8b79ad96e6fc84e2a18a",
+        "bytes": 1931
+      },
+      {
+        "path": "verl/tests/single_controller/detached_worker/README.md",
+        "sha256": "21f9d64b62e4cc7c8160ae82ec294a137be532c7da27c7535e531b7c0ad2351d",
+        "bytes": 242
+      },
+      {
+        "path": "verl/tests/single_controller/detached_worker/run.sh",
+        "sha256": "e40d384af705cca56a35074e3b3fc554eead94a30aa83cd57d29ea4382a3af6c",
+        "bytes": 93
+      },
+      {
+        "path": "verl/tests/single_controller/detached_worker/server.py",
+        "sha256": "2402e3f73568e8bb423fe75a59a77252b9a41d07f7321de5713b529b95a948e2",
+        "bytes": 5956
+      },
+      {
+        "path": "verl/tests/single_controller/test_auto_padding_on_cpu.py",
+        "sha256": "a60ea00c8ccd31d0dffe0c3a7dd5b925a01f2ed4b5f2649ecf5a88fbbc8a4830",
+        "bytes": 6036
+      },
+      {
+        "path": "verl/tests/single_controller/test_colocated_workers.py",
+        "sha256": "c6118c7f53d50b2b8f695f7773b81e9de1996816f27924be794278a610aee559",
+        "bytes": 2928
+      },
+      {
+        "path": "verl/tests/single_controller/test_colocated_workers_fused.py",
+        "sha256": "4ffebfe75cf6260ddf2c4e62c37216a1a0ddd84ab741aa8a0dcfe681be5ac077",
+        "bytes": 2940
+      },
+      {
+        "path": "verl/tests/single_controller/test_data_transfer.py",
+        "sha256": "a30b8203e505a2ff9e32e57b6961266f5dd50e22180c70752bb09f8d8f2950c2",
+        "bytes": 3624
+      },
+      {
+        "path": "verl/tests/single_controller/test_decorator_on_cpu.py",
+        "sha256": "689b33c0302568722b1b647eab08b973425f733043bbe5c45597d84557f5cbd6",
+        "bytes": 8795
+      },
+      {
+        "path": "verl/tests/single_controller/test_device_mesh_register.py",
+        "sha256": "f73aabf77433b5fe5b4e214f7fc5c84af0adce51c5bc888c71f4a2d25fb4ed60",
+        "bytes": 6966
+      },
+      {
+        "path": "verl/tests/single_controller/test_driverfunc_to_worker.py",
+        "sha256": "bf98fc4dad042d4b51e32da4f705e1b751db8be94b977b75c80b962b4e15ee42",
+        "bytes": 2487
+      },
+      {
+        "path": "verl/tests/single_controller/test_fused_workers_on_cpu.py",
+        "sha256": "ea0133ee0fc97bb05b5b6c1d00efebf85b43237203c9974ef44ba077fea43bee",
+        "bytes": 2478
+      },
+      {
+        "path": "verl/tests/single_controller/test_get_set_dispatch_collect_cpu.py",
+        "sha256": "64003a24d863413d9d19740f05cd6fa8f4b7886e759c32d995f54040490f194c",
+        "bytes": 1864
+      },
+      {
+        "path": "verl/tests/single_controller/test_high_level_scheduling_api.py",
+        "sha256": "00a0dfc004ffa180305666dc6a21d08676ae13890b5179c2e77f660eaf829b7e",
+        "bytes": 3804
+      },
+      {
+        "path": "verl/tests/single_controller/test_nested_worker.py",
+        "sha256": "56b80b1a5becc4bba8af71c69700e1c9c6dbad8eea13a22e77abafabd26c5ba3",
+        "bytes": 2315
+      },
+      {
+        "path": "verl/tests/single_controller/test_ray_collectives.py",
+        "sha256": "c57943d56908451cee1bc08a6ad2524f673745ad417c512430d0da157ff1175d",
+        "bytes": 4049
+      },
+      {
+        "path": "verl/tests/single_controller/test_ray_local_envs_on_cpu.py",
+        "sha256": "b587ac5598cfe986f1485284471339c8ec795fb041877d1d46528d6dfce593e3",
+        "bytes": 2669
+      },
+      {
+        "path": "verl/tests/single_controller/test_ray_utils_on_cpu.py",
+        "sha256": "01e6fe5bdd4c422155f57a6b0c37c765247a58c21b239ab7a6187bc8b2eecd28",
+        "bytes": 1693
+      },
+      {
+        "path": "verl/tests/single_controller/test_rvdz.py",
+        "sha256": "08a0e782997f6f97f209847df2b571ea55581159cb16c31a800e6fdc8792f08b",
+        "bytes": 1576
+      },
+      {
+        "path": "verl/tests/single_controller/test_split_resource_pool.py",
+        "sha256": "36e1ed49e61b326b5943910e194ad591d5bd443dc6ecba432f9bfd8f4ec15729",
+        "bytes": 7511
+      },
+      {
+        "path": "verl/tests/single_controller/test_worker_group_basics.py",
+        "sha256": "5ed49490d5041df58f3cff39b3e439b47c81a4d6f1cc06e77f559b0f026d9e23",
+        "bytes": 4532
+      },
+      {
+        "path": "verl/tests/single_controller/test_worker_group_torch.py",
+        "sha256": "27777f227f24e0dad762d27a65d864b7869c98814e9c13f111fb9b784f726394",
+        "bytes": 3781
+      },
+      {
+        "path": "verl/tests/special_distributed/README.md",
+        "sha256": "7ec81272891c5c25ee4fb5e8ea8eb93484749f97145f16bf660b621c5da3c593",
+        "bytes": 97
+      },
+      {
+        "path": "verl/tests/special_distributed/run_all.sh",
+        "sha256": "049fae83a78339e9ad63e6c305a256e14691221939797c176b5064f84bf2e0c0",
+        "bytes": 1047
+      },
+      {
+        "path": "verl/tests/special_distributed/test_fsdp2_cpu_offload_state_dict.py",
+        "sha256": "803f83bd937d2a1c3fa82cdbadad4b4e7cdd967ba6eb6a682cd8b240883774c4",
+        "bytes": 5592
+      },
+      {
+        "path": "verl/tests/special_distributed/test_fsdp_ckpt.py",
+        "sha256": "20590d8f3c14968d4e7c21febcce5e72cb9eb0c16b8711dad104fd7e845d2bc9",
+        "bytes": 6466
+      },
+      {
+        "path": "verl/tests/special_distributed/test_fused_kernels_ulysses_sp.py",
+        "sha256": "dba481e2399ce886ca05569cc4004ca2274e00678bac0311f77d8cea3a522b05",
+        "bytes": 6654
+      },
+      {
+        "path": "verl/tests/special_distributed/test_mcore_config_converter.py",
+        "sha256": "d48fb24275e776500bc03d7d73d982711a2597208718ab79761fcc01674ce530",
+        "bytes": 4362
+      },
+      {
+        "path": "verl/tests/special_distributed/test_tensor_dict.py",
+        "sha256": "5db219aad1f69c82f235b1dceea19b8ee9967d495bbdbb943674faeadec1c80b",
+        "bytes": 6653
+      },
+      {
+        "path": "verl/tests/special_distributed/test_torch_functional.py",
+        "sha256": "a9e8064f9040bb8f86f31d92006dc28acc15cbadab8705edda0ea9e97a438a87",
+        "bytes": 1197
+      },
+      {
+        "path": "verl/tests/special_e2e/__init__.py",
+        "sha256": "e65abd77db034b4f29eb1268c24867f84919dbce22e28d1997e563ed1d94179c",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/special_e2e/check_custom_rwd_fn.py",
+        "sha256": "90ce9b2dcd7b2b95f1a8fbb992827e32a0b469660cf935ef997315b39cfdc1f7",
+        "bytes": 1172
+      },
+      {
+        "path": "verl/tests/special_e2e/check_results.py",
+        "sha256": "689a0f95981bbe0a4ef7cd5afc5f9e3ba3a8e5299e4d282cbca1793c134d0a2b",
+        "bytes": 1753
+      },
+      {
+        "path": "verl/tests/special_e2e/envs/__init__.py",
+        "sha256": "4daebf8a28f6da69f558aee98aca9d3ca785d1888720a145457284d992536c64",
+        "bytes": 678
+      },
+      {
+        "path": "verl/tests/special_e2e/envs/digit_completion/__init__.py",
+        "sha256": "4899ab1633185583f051c05406a4eec8187d0fab9e1f7205b04134ec7d596292",
+        "bytes": 906
+      },
+      {
+        "path": "verl/tests/special_e2e/envs/digit_completion/task.py",
+        "sha256": "099898f9a9f79c8872db57e7de6bbb56df4dd0723e10948f39186bc3c99c0eca",
+        "bytes": 6361
+      },
+      {
+        "path": "verl/tests/special_e2e/envs/digit_completion/tokenizer.py",
+        "sha256": "ba444d36f81dc83a50f41ff40c534ecff135051bcd2045eb256961041dfbe547",
+        "bytes": 5543
+      },
+      {
+        "path": "verl/tests/special_e2e/ppo_trainer/expert_parallel/qwen2moe_minimal.json",
+        "sha256": "c278399ed53025e340907013eea4746fbc742f4e9ecffcdfeac12ba01df69a31",
+        "bytes": 58
+      },
+      {
+        "path": "verl/tests/special_e2e/ppo_trainer/expert_parallel/qwen3moe_minimal.json",
+        "sha256": "c278399ed53025e340907013eea4746fbc742f4e9ecffcdfeac12ba01df69a31",
+        "bytes": 58
+      },
+      {
+        "path": "verl/tests/special_e2e/ppo_trainer/run_function_reward.sh",
+        "sha256": "a68bf623db0e0db1aebe69c57a6374a14c491c310b5179d8017f0ef3c8329fae",
+        "bytes": 6903
+      },
+      {
+        "path": "verl/tests/special_e2e/README.md",
+        "sha256": "94b320baad1b6462aeda2dbcae87d2e3c1f47aee04faf8430b627c4813818d36",
+        "bytes": 83
+      },
+      {
+        "path": "verl/tests/special_e2e/run_fully_async_policy.sh",
+        "sha256": "f4fa671ea243528cf7542b623523056e5bc1a9f8dbfaeb64c579bb2020166c17",
+        "bytes": 9712
+      },
+      {
+        "path": "verl/tests/special_e2e/run_fully_async_policy_genrm.sh",
+        "sha256": "744e18f7c3129e9576954ffaf02050069c4fdf1fdde02c58a2dff5d8b0c74987",
+        "bytes": 7633
+      },
+      {
+        "path": "verl/tests/special_e2e/run_fully_async_policy_opd.sh",
+        "sha256": "847c60400c8ebe779574e1d952a53761d20bebb4be772751d0f69969a69d5f91",
+        "bytes": 11049
+      },
+      {
+        "path": "verl/tests/special_e2e/run_one_step_off_policy.sh",
+        "sha256": "3d7006ae19fcfdf6e8805ba721f1c049d04609fd67164d92bf16d4491db53a71",
+        "bytes": 8648
+      },
+      {
+        "path": "verl/tests/special_e2e/run_ppo_trainer_megatron.sh",
+        "sha256": "f4981fca23ecce443b19d42964d710b55893bca48da272ebb6dd9fabecb72f35",
+        "bytes": 14161
+      },
+      {
+        "path": "verl/tests/special_e2e/run_ppo_trainer_torchtitan.sh",
+        "sha256": "9fbfb4613fd29fbd912451b4d5a67ece6a947d1b0fb6c4e2e7b9a3080effdf8f",
+        "bytes": 4076
+      },
+      {
+        "path": "verl/tests/special_e2e/run_ppo_trainer_veomni.sh",
+        "sha256": "cbc115521c08712fd4e0e949ca34046135fe9ce31f444dd087b495026ad91953",
+        "bytes": 4933
+      },
+      {
+        "path": "verl/tests/special_e2e/run_v1_colocate_async_disrm.sh",
+        "sha256": "f8bcbcd7f9d79d7eb02c5fffaafea86266d512929b606117fe9677c072d66663",
+        "bytes": 4855
+      },
+      {
+        "path": "verl/tests/special_e2e/sft/compare_sft_engine_results.py",
+        "sha256": "0e45d57f2e098cf0f5d35d6fafdb6f206cb4b8a95bd3d6414de02a40d42bd43d",
+        "bytes": 2002
+      },
+      {
+        "path": "verl/tests/special_e2e/sft/run_sft.sh",
+        "sha256": "7c7857f4f7a3b44b6be6c337fd0df607d891bd19d7faa1f6cde9abd8a0d88342",
+        "bytes": 1785
+      },
+      {
+        "path": "verl/tests/special_e2e/sft/run_sft_engine.sh",
+        "sha256": "2ba8be40f3920383860cd93c3d201b85dd8aa656ea6289750043aaf052f78b4f",
+        "bytes": 6023
+      },
+      {
+        "path": "verl/tests/special_e2e/sft/test_sft_engine_all.sh",
+        "sha256": "48f0f72761360d04dd2d44aef507484e243dfe1f533eacbab16450a455fb0b76",
+        "bytes": 2698
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_dapo_moonlight-16b_megatron_npu.sh",
+        "sha256": "907b628c9a3b6090c8828c23ad43a760f524da947d51bd3ac99c317eb5857e81",
+        "bytes": 8797
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_grpo_qwen3_30b_megatron_sglang_npu.sh",
+        "sha256": "3b0d1851a9b466c9c37b4f1c309fe2ef387fb6419e2bcd640d212210748f984e",
+        "bytes": 9032
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_grpo_qwen3_30b_veomni_fsdp.sh",
+        "sha256": "cb96101a20dce470a1883eaa764ff426ab054c653c9c96f02cab14606b26e0c8",
+        "bytes": 4837
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_grpo_qwen3_5_2b_fsdp2_npu.sh",
+        "sha256": "c1b05137057167ad4d1d2a77df817b81012861c2ebf8f8f9e48e0a2bdec44688",
+        "bytes": 4897
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_grpo_qwen3_5_35b_megatron_npu.sh",
+        "sha256": "886274b592263e580a02b78e2197bd13284cd0172a615bbaa641f376d9c86c2f",
+        "bytes": 6546
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_grpo_qwen3_8b_mindspeedllm_npu.sh",
+        "sha256": "eab0b2f2e62162f24aa9203c4c930e5bbe562c5865b7610175bcc50512eeed71",
+        "bytes": 8493
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_gspo_qwen3_30b_megatron_npu.sh",
+        "sha256": "d5b164d8754de3a5724b59007160e734fdb285e594ca7f16282fd9a26b506a8c",
+        "bytes": 5521
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_gspo_qwen3_30b_megatron_npu_multinode.sh",
+        "sha256": "7aea50910ef8a371aa3615bfef2262f289d655c96b82bdb08292072e9474965c",
+        "bytes": 5522
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_gspo_qwen3_8b_fsdp2_npu.sh",
+        "sha256": "839311ee8737db348af4e819ebfcd70bb48a8d4f723b672b50bce284fc893f8f",
+        "bytes": 6413
+      },
+      {
+        "path": "verl/tests/special_npu/nightly_ci_ascend/run_ppo_qwen3-8b_fsdp_npu.sh",
+        "sha256": "4034995d5df70ceb32ccc0fcdeadc2fb84691d075c4802a75c379b774623a80d",
+        "bytes": 2864
+      },
+      {
+        "path": "verl/tests/special_npu/quick_start/run_qwen3_0_6b_fsdp2_sglang_ascend.sh",
+        "sha256": "d195c8e50531318ee24ef4e3e9a30949dc5685f302535601c40c1321aa47a9a0",
+        "bytes": 3833
+      },
+      {
+        "path": "verl/tests/special_npu/quick_start/run_qwen3_0_6b_fsdp2_vllm_ascend.sh",
+        "sha256": "62f081ec8deb5167b9185840ab9c0f6a9fe2071496fc2c7319dd046eb7ddf581",
+        "bytes": 4276
+      },
+      {
+        "path": "verl/tests/special_npu/quick_start/run_qwen3_0_6b_megatron_sglang_ascend.sh",
+        "sha256": "d0d8ca2e656f0e6c75df71b6a7638a42eb46465156255db238a4d71d7a4e5df4",
+        "bytes": 3552
+      },
+      {
+        "path": "verl/tests/special_npu/quick_start/run_qwen3_0_6b_megatron_vllm_ascend.sh",
+        "sha256": "ff8e601f824ae9005877a414a293b98a89b396277863baa591c9a4b16db647e9",
+        "bytes": 3579
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_06b_grpo_mindspeed.sh",
+        "sha256": "2099415d6bde8e696841640f1cff5c76f1099262a5e9bd88c7fe9ce0d4133be6",
+        "bytes": 3200
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_06b_ppo.sh",
+        "sha256": "ad5f0101eb06211778fbcbf80fce7bf0a61d92fa30bcabcda4299dcfbbdf405e",
+        "bytes": 2587
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_30b_grpo_mindspeed.sh",
+        "sha256": "3ceffc79fa2f1482638e7f9391f9581d0594ec0a0b819d978dbfa9f739247eb3",
+        "bytes": 5559
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_30b_grpo_mindspeedllm.sh",
+        "sha256": "9122460506cf13894b60d846bb4320a17aaa73f5e094546ceb078a218cd49bbe",
+        "bytes": 9867
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_8b_grpo_mindspeedllm.sh",
+        "sha256": "72c86917ae9d9b1641105be71c204aaed885cd362e127f8747281df4600bb093",
+        "bytes": 8254
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_8b_grpo_profiling.sh",
+        "sha256": "8b9ae6ebb97bd2062a290330249092ea180c3b2f0868d7452a5224e4177ad881",
+        "bytes": 4238
+      },
+      {
+        "path": "verl/tests/special_npu/run_qwen3_vl_8b_Instruct_fsdp2_npu.sh",
+        "sha256": "5cfa428af9e2ff9da36a17191aba8c482ffc263345dd496b22e49bc63142d7d5",
+        "bytes": 4702
+      },
+      {
+        "path": "verl/tests/special_sanity/check_api_docs.py",
+        "sha256": "d5f2991392f86818ec1205b041e8973f4a7591dacb060033a4fb4469112cfd6d",
+        "bytes": 4771
+      },
+      {
+        "path": "verl/tests/special_sanity/check_dataproto_usage.py",
+        "sha256": "bcdf7d1579690682882fbf5aa96529a2f07e689e1c932e90cbb2039f5a12b7f7",
+        "bytes": 2372
+      },
+      {
+        "path": "verl/tests/special_sanity/check_device_api_usage.py",
+        "sha256": "aa73efafa03a62c60655dc576b982ba589465cef04b6a3dd9289b81e5f691670",
+        "bytes": 5704
+      },
+      {
+        "path": "verl/tests/special_sanity/check_docs_time_info.py",
+        "sha256": "027bdfc9918a2df0ec7974d29eb408c1d160e09524b5459037bcda75eb905f5f",
+        "bytes": 2477
+      },
+      {
+        "path": "verl/tests/special_sanity/check_docstrings.py",
+        "sha256": "e276df0bea42845f69217c83ab7a030586eb9b099d8d3085711199cb2f91cbc7",
+        "bytes": 5468
+      },
+      {
+        "path": "verl/tests/special_sanity/check_example_naming.py",
+        "sha256": "1b3f52a67491384460e09aa592f04340393d0136ab43bfb93aadfaf9be96d021",
+        "bytes": 9278
+      },
+      {
+        "path": "verl/tests/special_sanity/check_license.py",
+        "sha256": "397e5118e2f3b86c99d7414e0f5dc932841e1c22e60148869dbc70dcae34b3a3",
+        "bytes": 4366
+      },
+      {
+        "path": "verl/tests/special_sanity/check_pr_description.py",
+        "sha256": "e833e3f4619e75ac2837a96c6ccc5fd2a31680cffcb5a714b5c7a480786c9b47",
+        "bytes": 2924
+      },
+      {
+        "path": "verl/tests/special_sanity/check_pr_title.py",
+        "sha256": "7db59eaf00a75ebaf77985f26b09a34c01783cf7291668e8a34b20aac7b4d198",
+        "bytes": 3185
+      },
+      {
+        "path": "verl/tests/special_sanity/test_check_example_naming.py",
+        "sha256": "34b857290020b163b1c089bb2a06fa706304bfd5e61eab9ce11f4c2d34e20401",
+        "bytes": 4042
+      },
+      {
+        "path": "verl/tests/special_sanity/test_config_docs.py",
+        "sha256": "f3562710e537bb99917f5d5aef897bd6122896f9141dfbf2cb5d108ae9fe6ee6",
+        "bytes": 3190
+      },
+      {
+        "path": "verl/tests/special_sanity/test_import.py",
+        "sha256": "9c9a5474f4c0c4c64cdd503eb438a598a59e00534107c6651226e695c06954df",
+        "bytes": 786
+      },
+      {
+        "path": "verl/tests/special_sanity/type_coverage_check.py",
+        "sha256": "8d95a6ad7f402bc478b02a0b39c30235fb01e0a674acdc78fb43a07a74158185",
+        "bytes": 6966
+      },
+      {
+        "path": "verl/tests/special_sanity/validate_imported_docs.py",
+        "sha256": "8c723cf739591edd8115cd147b59131a6d2aea542d65df210648339cda4c9030",
+        "bytes": 4513
+      },
+      {
+        "path": "verl/tests/special_sanity/validate_structure.py",
+        "sha256": "c1668551eb71d3609fd9d890bc33d2d9c629dce7eef7d79559a1550bc52e2430",
+        "bytes": 4245
+      },
+      {
+        "path": "verl/tests/special_standalone/README.md",
+        "sha256": "75786994ee8cfb78ead39806470e2304a9ab432fba97a98d383c6477bc12113e",
+        "bytes": 111
+      },
+      {
+        "path": "verl/tests/special_standalone/test_memory_buffers.py",
+        "sha256": "d82b06ab5bacf6986381da7ba283b9fb1283c3f7ff4ab7bdbc9d107a1329cc60",
+        "bytes": 2314
+      },
+      {
+        "path": "verl/tests/test_base_config_on_cpu.py",
+        "sha256": "2871f0ce7f213cf8e9c730e17b46209064ab9859a5b3fbdc73b621c79105e386",
+        "bytes": 1471
+      },
+      {
+        "path": "verl/tests/test_protocol_on_cpu.py",
+        "sha256": "66e2a2d6df02831d1e7e7d56b97378fa5c030f0c67906e8af2aedda155e13806",
+        "bytes": 52634
+      },
+      {
+        "path": "verl/tests/test_protocol_v2_on_cpu.py",
+        "sha256": "a1f593dc5829ab16a89170148846a8878e7da1b1bc9484c9afd06629c1a639d9",
+        "bytes": 45286
+      },
+      {
+        "path": "verl/tests/tools/__init__.py",
+        "sha256": "83f9d3d022d03ee5ca422338b9153cc2a80b2c38dd92ea3108eb12613087bd54",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/tools/_stub_search_tools.py",
+        "sha256": "3e62537d79f981ee35db69b3d7cbac087a11c21fd542d0dbb1570f8970754754",
+        "bytes": 1905
+      },
+      {
+        "path": "verl/tests/tools/test_function_tool_on_cpu.py",
+        "sha256": "66d385addf68702823dc3bd694dc27039161226f6b7e5b7e5d6d2b53fe10821a",
+        "bytes": 19313
+      },
+      {
+        "path": "verl/tests/tools/test_mixed_tools_on_cpu.py",
+        "sha256": "92c0f170cdefa5825ea20c189755891c3e8312195a142c27c80c85c2a8907985",
+        "bytes": 12499
+      },
+      {
+        "path": "verl/tests/trainer/__init__.py",
+        "sha256": "ccd96a35fe71c2fa1f67707601ab8f8aec323f5718b1bc490553b0d0beac0954",
+        "bytes": 638
+      },
+      {
+        "path": "verl/tests/trainer/ppo/__init__.py",
+        "sha256": "5bf751cb7fba83b1c15b0083be83f40415ffcfe27af157f41b62edbbb88393ca",
+        "bytes": 642
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_core_algos_on_cpu.py",
+        "sha256": "0a60e917589ab91646989f0a8616f810fea0dc70047d2b8c13914f4977f5569c",
+        "bytes": 13397
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_metric_utils_on_cpu.py",
+        "sha256": "a3c6d78ba578e33e7312c285d6fbadc6abe24e8f789d307a050aec2ee1e8ca24",
+        "bytes": 20806
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_rollout_corr.py",
+        "sha256": "b5751c7599a3fbf14c722018d84490b7776619e88cc120dd0c74042f120c8678",
+        "bytes": 18353
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_rollout_corr_integration.py",
+        "sha256": "3d8c1a1471043a5cbe03cf010c0b2e3dff293370c79b2273aa70a02261bdd759",
+        "bytes": 13012
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_rollout_moe_lb_metrics_on_cpu.py",
+        "sha256": "148e3ae101b0d3c74146c0973422abf3b4bbf3b930c5d4fcb62315b47837f6b0",
+        "bytes": 9027
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_spec_decode_metrics_on_cpu.py",
+        "sha256": "1f2bddaf789b50a726dad86ba9e664ddb0e7114c82ec548a3e0a70f711c7fb6a",
+        "bytes": 1848
+      },
+      {
+        "path": "verl/tests/trainer/ppo/test_value_loss_normalization_on_cpu.py",
+        "sha256": "0d7dc94c4108d3aa091b4b58f80a78135239037980eb57458275cad1b3128b4b",
+        "bytes": 11682
+      },
+      {
+        "path": "verl/tests/trainer/ppo/v1/test_compute_reward_colocate_on_cpu.py",
+        "sha256": "c8bb11c733e3b3cce02efb7454b492266ae209070d79b9dbc378e4e2187fac68",
+        "bytes": 9687
+      },
+      {
+        "path": "verl/tests/trainer/ppo/v1/test_metrics_aggregator_on_cpu.py",
+        "sha256": "f7435601d7a6477f7e2d6bd39b8a03306488c2a74cdc5629b7ccd37519bb75ec",
+        "bytes": 7002
+      },
+      {
+        "path": "verl/tests/trainer/ppo/v1/test_reissue_inflight_on_cpu.py",
+        "sha256": "0a54c50b5b6eeb5ac72dc640c1e0ddecc29d0b5b944d9e1f84e7f76958525aeb",
+        "bytes": 18067
+      },
+      {
+        "path": "verl/tests/trainer/ppo/v1/test_replay_buffer_on_cpu.py",
+        "sha256": "dfad48951e0d69fdb5bdff04477ab17adce15164739dad07dbfcbe3a4ec091ee",
+        "bytes": 37683
+      },
+      {
+        "path": "verl/tests/trainer/ppo/v1/test_streaming_feed_on_cpu.py",
+        "sha256": "5631580ec56fc7bcb09bef83d567e4a62f5d9a373616152866b306a0d70725ef",
+        "bytes": 8452
+      },
+      {
+        "path": "verl/tests/trainer/test_multi_trajectories_advantage_on_cpu.py",
+        "sha256": "70d4f51b29d4cadd52d7b9e467e9051764e09730ccb53b7245aad8aee0125c01",
+        "bytes": 3041
+      },
+      {
+        "path": "verl/tests/utils/_test_module.py",
+        "sha256": "8f22a6702124ff650f019420552fbccb53a8e004ead9d9c1469d7bf9e1688f30",
+        "bytes": 963
+      },
+      {
+        "path": "verl/tests/utils/ckpt/test_checkpoint_cleanup_on_cpu.py",
+        "sha256": "30f2df35a31c6eeb21db737557336c9178bb4b69a5427a44621121eaa4a18a18",
+        "bytes": 5241
+      },
+      {
+        "path": "verl/tests/utils/ckpt/test_esi_save_ckpt_on_cpu.py",
+        "sha256": "f3e0e791b0e9d5a232cb1343d85a25e156e6fa36386d2185d6f9752ac97f3c9f",
+        "bytes": 3271
+      },
+      {
+        "path": "verl/tests/utils/ckpt/test_megatron_checkpoint_manager_on_cpu.py",
+        "sha256": "e2b107f5d97b28cc66ae8452d5379d56392a83181f13f1e6c45f6d1a42d030e4",
+        "bytes": 28135
+      },
+      {
+        "path": "verl/tests/utils/dataset/test_multiturn_sft_dataset_on_cpu.py",
+        "sha256": "28aa8bd7826b91314de5bba8d7b2a8af1323321d398f6cd50c4dbf421dc9cb80",
+        "bytes": 22759
+      },
+      {
+        "path": "verl/tests/utils/dataset/test_rl_collate_fn_on_cpu.py",
+        "sha256": "f2816d4c441937e74f303124dfc99b11bd35b96af674f9e97891aa01eb2c66cf",
+        "bytes": 2493
+      },
+      {
+        "path": "verl/tests/utils/dataset/test_rl_dataset_on_cpu.py",
+        "sha256": "1575425dea8e4b3e27ce9863c90612a41ecb7dbf0227d3dbac9d7430f377e767",
+        "bytes": 10067
+      },
+      {
+        "path": "verl/tests/utils/debug/test_metrics.py",
+        "sha256": "6658b9714678c8ad3af5f0e6e3e83ff68d2d917ebc48b5e9896081b2b0a5abf5",
+        "bytes": 1917
+      },
+      {
+        "path": "verl/tests/utils/megatron/test_optimizer.py",
+        "sha256": "8e35db34beafbe2428f5f913455a5daaa11ef79a0f3bc4cf9ad3b126e787f31f",
+        "bytes": 8504
+      },
+      {
+        "path": "verl/tests/utils/megatron/test_optimizer_offload_and_load.py",
+        "sha256": "97e3b39cb64aa8ac50e3f99c74b4091ca6e1d3d53d98a3ebec5ffa17eb648c30",
+        "bytes": 5389
+      },
+      {
+        "path": "verl/tests/utils/megatron/test_pipeline_parallel.py",
+        "sha256": "96ce0dd50973884492cf4250a120cfbefd31a29ad2f2cfddd2a23fd2acfdf9dc",
+        "bytes": 2374
+      },
+      {
+        "path": "verl/tests/utils/reward_score/reward_score/test_sandbox_fusion_on_cpu.py",
+        "sha256": "f7139ae572092f7260fb2fead4d70072339277627844ce2c7b88c54a54bd9498",
+        "bytes": 30500
+      },
+      {
+        "path": "verl/tests/utils/reward_score/test_sandbox_on_cpu.py",
+        "sha256": "af5fa0ad4a0b1c47cd4e1cc4467df66d54b55b0544c98e2ba4a85b55fcb859b3",
+        "bytes": 10190
+      },
+      {
+        "path": "verl/tests/utils/test_activation_offload.py",
+        "sha256": "7838cabf5f4d9fd871bb2cbe30a540e0e1012cf43e1566a0e2e8b71e133e2a1b",
+        "bytes": 6829
+      },
+      {
+        "path": "verl/tests/utils/test_audio_input_support_on_cpu.py",
+        "sha256": "71ba8346531145546b4aa0d2ae49d205f19f16d5ce1bbeccac86ae272ad7877b",
+        "bytes": 4562
+      },
+      {
+        "path": "verl/tests/utils/test_bucketed_weight_transfer.py",
+        "sha256": "d79cc82c98a7ecbd60297bf7d16fddeb06ffb0977a691ab3954de92d13c8abd3",
+        "bytes": 11134
+      },
+      {
+        "path": "verl/tests/utils/test_check_ipc_version_support_on_npu.py",
+        "sha256": "bdc1cd6bf3f628cf029cab17e6f3aa198e823efbaa120281eac49ca864f1dff1",
+        "bytes": 9601
+      },
+      {
+        "path": "verl/tests/utils/test_check_profiler_output.py",
+        "sha256": "eebb8f4ffed6da8e4a3b54f1c10e95124912c8cbb7558c903ba464a002acb667",
+        "bytes": 5725
+      },
+      {
+        "path": "verl/tests/utils/test_config_on_cpu.py",
+        "sha256": "854d99aab8e721372c57645aef63a7b1f4df46f7a2b7b7b95a5239b143ae091d",
+        "bytes": 3177
+      },
+      {
+        "path": "verl/tests/utils/test_continuous_token_on_cpu.py",
+        "sha256": "380cf308efd91eb3def128a424fe97d30ec28f1b022e251542a2e07c04cf7663",
+        "bytes": 33338
+      },
+      {
+        "path": "verl/tests/utils/test_flops_counter.py",
+        "sha256": "ec0f846f77223eb8470a154f7359905d1fdee9e368f19d53a888681dfe922bb3",
+        "bytes": 23721
+      },
+      {
+        "path": "verl/tests/utils/test_fs_on_cpu.py",
+        "sha256": "4a7f48ff9a3dd17e7a81337c552f2bed1820eb258e3afb8d17e4949235e16fd1",
+        "bytes": 3279
+      },
+      {
+        "path": "verl/tests/utils/test_fsdp2_peft_wrapping.py",
+        "sha256": "bd2c39a4872f6872dfcdd9ed163fc82846169f92c998ffc3796b69be6630a382",
+        "bytes": 5648
+      },
+      {
+        "path": "verl/tests/utils/test_fsdp_lora_merge.py",
+        "sha256": "3f2ed027d9a2690c9de2c8dc27594c63da0865be4ad35759ba788e5eac0fc32e",
+        "bytes": 17108
+      },
+      {
+        "path": "verl/tests/utils/test_fsdp_wrap_policy_on_cpu.py",
+        "sha256": "5edfcf01ee1bdffedf38a2c44562921b3eb0b2d317a0a3f4b06bf2f3bcd2137c",
+        "bytes": 2886
+      },
+      {
+        "path": "verl/tests/utils/test_groupwise.py",
+        "sha256": "ee407833bb58dad09237500310e659d759a452980883ed3bf0d44b200e30297c",
+        "bytes": 4473
+      },
+      {
+        "path": "verl/tests/utils/test_import_utils_on_cpu.py",
+        "sha256": "1ec09288081038ec4a2450f781c22ca4ba4273822298228af829723c9fb1c4d0",
+        "bytes": 3170
+      },
+      {
+        "path": "verl/tests/utils/test_linear_cross_entropy.py",
+        "sha256": "dfc6a360d651f09f53063628e24d5ba649bb2e33122b040d176a778828fc6adf",
+        "bytes": 17890
+      },
+      {
+        "path": "verl/tests/utils/test_megatron_bshd_preprocess.py",
+        "sha256": "55f66a11fd910fef2f9c66cab30424375482233805946e5cd224681112a2b0e9",
+        "bytes": 6322
+      },
+      {
+        "path": "verl/tests/utils/test_mlflow_key_sanitization.py",
+        "sha256": "eebc2f1ba21c246147798087dbc237149b4170799c9887fe90f282b98f269eee",
+        "bytes": 3119
+      },
+      {
+        "path": "verl/tests/utils/test_model_on_cpu.py",
+        "sha256": "5ac29781947ace90ac9d3e9e2141dd929d7bf2f837799db52312fcee105ca064",
+        "bytes": 2539
+      },
+      {
+        "path": "verl/tests/utils/test_normalize_peft_param_name.py",
+        "sha256": "3d9aa79ff6d8b9cae7f4732a62b5c82e0e2e9e5cb50ca91d55b15646f859e5f3",
+        "bytes": 8258
+      },
+      {
+        "path": "verl/tests/utils/test_normalize_peft_param_name_on_cpu.py",
+        "sha256": "cf5c7e1546774647174d6a38ec70176f52ae1b987cefe77ba8f096586cf7a9c1",
+        "bytes": 7123
+      },
+      {
+        "path": "verl/tests/utils/test_nvtx_profile.py",
+        "sha256": "0be54bdccc26fe6188207c9edaa190c79442ad09d3030e202b986a31a0da8455",
+        "bytes": 7475
+      },
+      {
+        "path": "verl/tests/utils/test_padding_on_cpu.py",
+        "sha256": "b9ea4966bc40b4e921a699b33c9040e6f3968ef86f563a33a1c894b1d478d6d0",
+        "bytes": 13693
+      },
+      {
+        "path": "verl/tests/utils/test_prepare_micro_batches_with_group_size.py",
+        "sha256": "26826d4c51c0e65744c141249a0c698b644555718754fad14c0b10a127cb150e",
+        "bytes": 8483
+      },
+      {
+        "path": "verl/tests/utils/test_rl_insight_logger_on_cpu.py",
+        "sha256": "c2f9ea7945ecd33cb92e28fe3b78f01bc1dd65d4c7b1f84d2d0a014809c1c319",
+        "bytes": 4971
+      },
+      {
+        "path": "verl/tests/utils/test_rollout_trace_on_cpu.py",
+        "sha256": "6146e9e38fcd183589514721be268a2cce258a9863f62b1fa8d8b41091a18b1f",
+        "bytes": 11940
+      },
+      {
+        "path": "verl/tests/utils/test_seqlen_balancing.py",
+        "sha256": "78af85289b19019b7b08b87d1e109f11886f13437b5a0d6aef625c55eb400496",
+        "bytes": 10308
+      },
+      {
+        "path": "verl/tests/utils/test_server_profiler.py",
+        "sha256": "b8e43cc0e5f640ac4244f72d6530bb89e0e77b34c8cc7fe03aeb3e5caf47af8e",
+        "bytes": 8393
+      },
+      {
+        "path": "verl/tests/utils/test_sglang_fp8_utils.py",
+        "sha256": "020df0e95b7267a7458aac5bc1f268575cd62c6fd659453d143a3a870c5f9392",
+        "bytes": 4157
+      },
+      {
+        "path": "verl/tests/utils/test_shared_memory.py",
+        "sha256": "090b3b7e4e99efa8e34f1aa0ed6b6924dc06164155f6b1b2a10c14dc051e6eeb",
+        "bytes": 9795
+      },
+      {
+        "path": "verl/tests/utils/test_special_adapter_path_integration.py",
+        "sha256": "bdd9828e06cbb9210e5701544aa4dca45e1d111f55ac8ddf9d129f9b49cf8c49",
+        "bytes": 8030
+      },
+      {
+        "path": "verl/tests/utils/test_special_linear_cross_entropy_tp.py",
+        "sha256": "cf93ca195edfda7a310b87e41f81036719e795f4b0b1fc54aea884d708bf56f4",
+        "bytes": 22118
+      },
+      {
+        "path": "verl/tests/utils/test_special_megatron_kl_loss_tp.py",
+        "sha256": "532d3aaa14292c25bbc236f8689453e7c370eb7fa40ab706159a2447428716ba",
+        "bytes": 11017
+      },
+      {
+        "path": "verl/tests/utils/test_special_mstx_profile.py",
+        "sha256": "f0296dcc04e262d584f6a4d67f3028666e03179c9e44e4cf86b658c93b7a2116",
+        "bytes": 11953
+      },
+      {
+        "path": "verl/tests/utils/test_temp_env_on_cpu.py",
+        "sha256": "38a6612c5f6b75f300de03a9054581a10fbcf030b9d398e3c7c7a681c7bdbd51",
+        "bytes": 4698
+      },
+      {
+        "path": "verl/tests/utils/test_timeout_decorator_cpu.py",
+        "sha256": "4dce17f205975c4f5d31195492376c5c01ef1ba78501047ed159414085f97d6d",
+        "bytes": 9941
+      },
+      {
+        "path": "verl/tests/utils/test_tokenizer_normalize_on_cpu.py",
+        "sha256": "a2057c14fa720f6fa7bd8299705f3389ce220967541f22e068d5a5162c3f005d",
+        "bytes": 2213
+      },
+      {
+        "path": "verl/tests/utils/test_torch_functional.py",
+        "sha256": "341c60a490aa50e04b36cf700acb2558d8a96971732136aac8051e6845c9e0e4",
+        "bytes": 6492
+      },
+      {
+        "path": "verl/tests/utils/test_torch_profile.py",
+        "sha256": "ccfeb89f29ed8f76d6a765a2e30986c9ebb1629d1257cef45d2b8a751fcf3d3a",
+        "bytes": 3336
+      },
+      {
+        "path": "verl/tests/utils/test_tracking_on_cpu.py",
+        "sha256": "92c3f71dfb300bc8f09c1f3969f15ace2d6ebee4d7d2d5bfa802b7e0511b3db8",
+        "bytes": 1831
+      },
+      {
+        "path": "verl/tests/utils/test_turn_separator_on_cpu.py",
+        "sha256": "35a85e7609267ad7324654a4f27120e8b16fa4c42c862a14d4b0d51c3c34287b",
+        "bytes": 11807
+      },
+      {
+        "path": "verl/tests/utils/test_utils_skip.py",
+        "sha256": "542e703996142debe2bfdd619ae273d76e0b69f74061adbfe07b971e81302051",
+        "bytes": 21584
+      },
+      {
+        "path": "verl/tests/utils/veomni/test_router_replay_on_cpu.py",
+        "sha256": "003b0c0ae5efac993016707d62ccb5e61851561a08ab13e37ab3f8d1281ee0e8",
+        "bytes": 15989
+      },
+      {
+        "path": "verl/tests/utils/veomni/test_special_export_unfused_experts.py",
+        "sha256": "29f29069d2d8ffee07a2aedc91be9c363fef5890689c4f69ebdfe3ca117d8df9",
+        "bytes": 5316
+      },
+      {
+        "path": "verl/tests/workers/config/test_actor_config_on_cpu.py",
+        "sha256": "aa75b870950f179d5662585a6ffd006ebb26fd548cff6d4941b1f76f6e207de0",
+        "bytes": 9649
+      },
+      {
+        "path": "verl/tests/workers/config/test_critic_config_on_cpu.py",
+        "sha256": "81c4e601cf0302a03ea268de953c98ea8a6eb815aa035fe77da3f7fd43243b5c",
+        "bytes": 12839
+      },
+      {
+        "path": "verl/tests/workers/config/test_engine_config_on_cpu.py",
+        "sha256": "9bcfd0a35df8392ce10f4080b6a9dcfda57dda619e5927019293a299843c6af7",
+        "bytes": 2753
+      },
+      {
+        "path": "verl/tests/workers/config/test_model_config_on_cpu.py",
+        "sha256": "b50e80ae8611ab4d07466800e7eabfea7ef3dbb8e92b1438af6c1616db2dff4c",
+        "bytes": 3602
+      },
+      {
+        "path": "verl/tests/workers/config/test_optim_config_on_cpu.py",
+        "sha256": "490e4b50ed31aa9262b0141e5ae4dbb6e7f9636cdbd619a783a790020e96dcb0",
+        "bytes": 2065
+      },
+      {
+        "path": "verl/tests/workers/reward_manager/test_dapo_on_cpu.py",
+        "sha256": "fc983e76cf547c61192c117378327776c89ee81d7a80c08c875d3bc4e3e5bc3d",
+        "bytes": 4725
+      },
+      {
+        "path": "verl/tests/workers/reward_manager/test_naive_on_cpu.py",
+        "sha256": "fba577c81ca0a092ee12834f6e1daf7452ca9ac2a8ab6f27e12c01d70b781c30",
+        "bytes": 3330
+      },
+      {
+        "path": "verl/tests/workers/reward_manager/test_registry_on_cpu.py",
+        "sha256": "07c7adc530422f46fd85ca5e21195f52c4ce2d229cbe20d9163642acfad30b72",
+        "bytes": 3098
+      },
+      {
+        "path": "verl/tests/workers/rollout/perf/vllm_async_rollout.py",
+        "sha256": "4067e8b2ade442a15b7f8142201a8b57603b7f7c5212cddf3a4425c3b45a09e6",
+        "bytes": 5105
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_sglang/test_http_server_engine.py",
+        "sha256": "8413eb8546f30a22004f6a4e51a57e581a73e135f59bfce82a6ee1d27a50d62d",
+        "bytes": 40022
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_sglang/test_lora_sleep_level.py",
+        "sha256": "1fc8c41fbce101dc8cde38071c7c15cfed4afa2e589c616e458d740518ca76f5",
+        "bytes": 7801
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/__init__.py",
+        "sha256": "83f9d3d022d03ee5ca422338b9153cc2a80b2c38dd92ea3108eb12613087bd54",
+        "bytes": 600
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/test_adapter.py",
+        "sha256": "80b6c30455441df72f026f3edb61948b27d83b5cffc31bb6f04eb6f0bea43ada",
+        "bytes": 7651
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/test_async_server.py",
+        "sha256": "10a8dde8123052ab225f27187332b892d431088996282bdb1a611fd765729192",
+        "bytes": 14328
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/test_inter_node_rollout.py",
+        "sha256": "52410c93464633435ef29036122d98519c3ffd7611efba95da3c104dd442b624",
+        "bytes": 3753
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/test_trtllm_abort.py",
+        "sha256": "ebd8b325e4020a0809a837f975396cb9829c77bd07ce5bc16584957cdd0442be",
+        "bytes": 15419
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_trtllm/test_trtllm_rollout_utils.py",
+        "sha256": "6829a4dccaa1228d5986a91ef1b6c17f420ac04e706fe274c8f2ab789a176e09",
+        "bytes": 15390
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_vllm/test_mtp_hybrid_sleep_acceptance_on_cpu.py",
+        "sha256": "a1086ed2b432d3f2b9d6d9e0eeab796c33c81e59b769127ce5d18ef8afad4e45",
+        "bytes": 2488
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_vllm/test_vllm_abort.py",
+        "sha256": "8d48c286d85073145b5e55ff3cc6023a44acf0696b3192128f65484f4dd76d1b",
+        "bytes": 8456
+      },
+      {
+        "path": "verl/tests/workers/rollout/rollout_vllm/test_vllm_generation_determinism.py",
+        "sha256": "293c82077adc30129919e50527b868c09fac18f5d85365c5062852ed3083a614",
+        "bytes": 11813
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_hf_rollout.py",
+        "sha256": "81a58b71e8d8647aae464d132ce203886afb9fb30e4ea341fd9416d8b5588bca",
+        "bytes": 7490
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_pd_disaggregation.py",
+        "sha256": "8c759191ab1e7a518800ba64c7b26ba39e5b44291c910341d0014a40be20e4f7",
+        "bytes": 6628
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_sglang_async_rollout_multimodal_delta.py",
+        "sha256": "fea11f9b963992ee836625f547ff4348ab6de33f3842ed47be63aa9910e3cdd0",
+        "bytes": 7755
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_sglang_rollout_sharding_manager.py",
+        "sha256": "ed47abfeb3bbb1d9736bcc37f57cc3514540033a2a030eb2a5129c7632395215",
+        "bytes": 3737
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_vision_placeholder_tokens_on_cpu.py",
+        "sha256": "908fa206089a7d47e88fc801439490fb1afff47f3a21ee315d1a6cae2161c82f",
+        "bytes": 4172
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_vllm_cli_args_on_cpu.py",
+        "sha256": "2968f2d70c7d6b01243c23018cc7e32ae1ee355a210feef5e74f55c2ae373218",
+        "bytes": 7218
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_vllm_pd_disaggregation_on_cpu.py",
+        "sha256": "30334dbdf1001e477a3b91149d5bbce9eff80c113903574940f4e557e03af07c",
+        "bytes": 25961
+      },
+      {
+        "path": "verl/tests/workers/rollout/test_vllm_weight_update_utils_on_cpu.py",
+        "sha256": "a8fd18cfceab2c1c34ed99011d489c6262ef1756b2b16f1a4025271efef81715",
+        "bytes": 8825
+      },
+      {
+        "path": "verl/tests/workers/test_chunked_topk_log_probs_on_cpu.py",
+        "sha256": "d5969dd9457387f4b4bb0a75a996304065c97b32d4d75ce6dd32a7390ed434f8",
+        "bytes": 7891
+      },
+      {
+        "path": "verl/tests/workers/test_distillation_topk_symmetry_on_cpu.py",
+        "sha256": "8e7331b9742c49c67e09702e55c4e2ba558394ae3e453edf4860aa6f5b44f470",
+        "bytes": 9763
+      },
+      {
+        "path": "verl/tests/workers/test_engine_forward_step_detach_on_cpu.py",
+        "sha256": "f953e09a3ad5916584bf4330fa153460039c235e20736fa46dadf307f5824937",
+        "bytes": 4945
+      },
+      {
+        "path": "verl/tests/workers/test_engine_workers_lora_sync.py",
+        "sha256": "5f8e3584c290976e7776ff62c132265525e2a03d3520f504bdaed6250052319e",
+        "bytes": 16243
+      },
+      {
+        "path": "verl/tests/workers/test_megatron_distillation_only_on_cpu.py",
+        "sha256": "366d0e950ffd629e5450610e80e760d184bedc7ddd593a72068a07a82dba0eac",
+        "bytes": 4229
+      },
+      {
+        "path": "verl/tests/workers/test_router_replay_engine_helpers_on_cpu.py",
+        "sha256": "717855a23c7ef4074fe3e17745095e35f97862216396a470aaec903c207b9ab1",
+        "bytes": 16646
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_235b_256k_megatron.sh",
+        "sha256": "73347a752c16c56e514aa27fed6f84ebca23f14a9667881aca718f32c1b7af6c",
+        "bytes": 8484
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "2f3c9a5a0077c9a7742aa03330ef665849d85dde4bde8a26b95a541b84d062f3",
+        "bytes": 8751
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_30b_a3b_mindspeed.sh",
+        "sha256": "c1fa3c80f81f79fab662efab904bf0f432c8f358bc119e24c7f3a4c704a311a4",
+        "bytes": 9448
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_32b_fsdp.sh",
+        "sha256": "b0df604d7372339843f5fc71bb11d102e27e818861501a92a7f2a37c70df57ee",
+        "bytes": 2705
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_32b_mindspeed.sh",
+        "sha256": "739dbd12ab53b6226d2c58b21dd429d617279c43dd1d77497eb890fbbb1eea54",
+        "bytes": 8767
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_5_122b_a10b_32k_megatron.sh",
+        "sha256": "5ba3015c8b1b9690b13b43cad9e5ac67fee36da8caa2b018e5852e1532025233",
+        "bytes": 7020
+      },
+      {
+        "path": "verl/examples/ascend_extras/grpo_trainer/run_qwen3_next_80b_fsdp.sh",
+        "sha256": "b53d739eb873d39b60a3992b27a8a2ac04e9b8b2f31333cdc506e683c5154652",
+        "bytes": 5707
+      },
+      {
+        "path": "verl/examples/ascend_extras/gspo_trainer/run_qwen3_32b_fsdp.sh",
+        "sha256": "67864c4e8e8fe27a36ca943ab4f60686be3a993edacd0ce1c1d80032442b6635",
+        "bytes": 6705
+      },
+      {
+        "path": "verl/examples/ascend_extras/ppo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "5cb9af050abd81e9610628b9aae6d0884fc52c39e8317fe93a5f08624a82cf51",
+        "bytes": 2589
+      },
+      {
+        "path": "verl/examples/cispo_trainer/README.md",
+        "sha256": "cb60ac8b4bb1927ee4046799e9f5369e5cb0a5973ead74c863dd5735e51a145b",
+        "bytes": 732
+      },
+      {
+        "path": "verl/examples/cispo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "14c0355eeac3d90dfd87d5a80d07cef8cf600b7dca42e08892600a8219c2f15a",
+        "bytes": 3957
+      },
+      {
+        "path": "verl/examples/dppo_trainer/README.md",
+        "sha256": "2671f8373c65cb00be60f90ef6d0e6007b7fe8bda6572ce8a314c05b084c4ed9",
+        "bytes": 4981
+      },
+      {
+        "path": "verl/examples/dppo_trainer/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "413201254f74eebdedc95b83a069330d1b29c11e58e52dc9aaac7f8770254dfd",
+        "bytes": 5562
+      },
+      {
+        "path": "verl/examples/gdpo_trainer/README.md",
+        "sha256": "045920b7e7acaadd931e925aae0b064005d2cd685dc09df0384094dc6ab34b73",
+        "bytes": 738
+      },
+      {
+        "path": "verl/examples/gdpo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "e10f4b115ed4509582b5c1969f75135a67cfe50964d5017722e5f182167876a5",
+        "bytes": 3803
+      },
+      {
+        "path": "verl/examples/generation/run_deepseek_llm_7b.sh",
+        "sha256": "06a902faf5d7d28d0dded6cf45761d1f39b2870717124708733effcf5bc88d02",
+        "bytes": 1666
+      },
+      {
+        "path": "verl/examples/gmpo_trainer/README.md",
+        "sha256": "788f667e6b54041efb0da7c913c21fc86ff708c169993c5422a3d09da9bd6503",
+        "bytes": 3108
+      },
+      {
+        "path": "verl/examples/gmpo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "72a0dcba09dd9010a163927f2a2d2a544de267d876a96da924a2d2a761b020c9",
+        "bytes": 3883
+      },
+      {
+        "path": "verl/examples/gpg_trainer/README.md",
+        "sha256": "93bfec55f42e19b30821d560430f04db327cb72b4d31d6aa16d76d2733bafa55",
+        "bytes": 1538
+      },
+      {
+        "path": "verl/examples/gpg_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "dcf89e52cf5e8262cc245cdf0d778f5cde92727e26a1b2a30341ecbd9f3f9440",
+        "bytes": 3519
+      },
+      {
+        "path": "verl/examples/gpg_trainer/run_qwen3_8b_megatron.sh",
+        "sha256": "316bbae288f65e16c2dd97d2125dcbc0bec0d121d206788653a85a07624e459a",
+        "bytes": 3700
+      },
+      {
+        "path": "verl/examples/grpo_trainer/README.md",
+        "sha256": "e7df664ff39d7c2eeb387468926c3bc591a9b7f49748931523339ae61b7b9436",
+        "bytes": 6617
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_deepseek_v3_671b_megatron.sh",
+        "sha256": "471fadccba33bb115ddbb18fade3e19937fea253290fef70e612593e54886a84",
+        "bytes": 8513
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_deepseek_v4_flash_megatron.sh",
+        "sha256": "121dece8318928863b4e0de54ed19eb5f9337fda65e88af7bbb4cf1dd9e2f3d6",
+        "bytes": 9992
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_deepseek_v4_megatron_lite.sh",
+        "sha256": "58a655a330fa25d44a4724a2f9bd5af5774f0483c61ecbfb12bf9ab239408c19",
+        "bytes": 7190
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_glm4_1v_9b_fsdp.sh",
+        "sha256": "ec87ae333c178fcea9dde3acdd114960f7b2df3ff0d6ba76b60e93680ef1935e",
+        "bytes": 3541
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_gpt_oss_20b_fsdp.sh",
+        "sha256": "521cae42a78c80ad89e00c545858eebedab54d314f0ae54781becd722eca1540",
+        "bytes": 4688
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_hy_v3_megatron.sh",
+        "sha256": "9515de1605d54d8bacd60fced9614b6df38da9ba934ec765e41ee632d231d983",
+        "bytes": 10855
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_kimi_k2_6_glm5_1_megatron_lite.sh",
+        "sha256": "a338e066c20821648628c3420e8c89b7312b4733c34f17b0133721890c3900c5",
+        "bytes": 7917
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_minicpm_o_2_6_fsdp.sh",
+        "sha256": "6340e39345fa983542f91653b0ff4c8f4f2ed8302d2d59fcd418eddcb87e0979",
+        "bytes": 3801
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_mistral_nemo_12b_skyworkrm_fsdp.sh",
+        "sha256": "b5502225843feb07a2b807aba0d1365415724913fb6ff79fd496b86eb6b80d3c",
+        "bytes": 3719
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_moonlight_16b_a3b_megatron.sh",
+        "sha256": "f0a67356543361be9185fb9ccc2c17505a7f28ffbbc89191548a10392903e7b2",
+        "bytes": 4239
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_nemotron_nano_v3_30b_a3b_megatron.sh",
+        "sha256": "d4c3b76fa3db19d043786c16a4b7b9c462df22169f447bcc440914a0e113c5ac",
+        "bytes": 8662
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen2-7b_math_megatron_fsdp.sh",
+        "sha256": "6b43c785afe3a1ea2a283b7bfa0063590cbbea83f6d0ea7d831f74688ee7834d",
+        "bytes": 3714
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen2_5_32b_fsdp.sh",
+        "sha256": "98670b88040f9c489b43e1e9e4721682621dfd3b61495f997e4862afa1cbb1a2",
+        "bytes": 4105
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen2_5_vl_7b_fsdp.sh",
+        "sha256": "1a921f36fe19443f69054b55e90cc7896171e1003e245b5d601e6c5b24b797c7",
+        "bytes": 5103
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen2_5_vl_7b_megatron.sh",
+        "sha256": "5922e5fe565b0ea869853aefc4bc7e8ccea49c3abea8424638c584261499fde4",
+        "bytes": 3741
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_235b_a22b_megatron.sh",
+        "sha256": "3b48acf37deab76dab151175f727fcf995dac61160e82e7fb18695c7b127ca66",
+        "bytes": 7742
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_30b_a3b_fsdp.sh",
+        "sha256": "16a8b2c6e70d86903f880c547efee244a5b204edb91041f0d7b58ffa44c56804",
+        "bytes": 3639
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "740b57d1e8e7d502c3dd7d4c99d2e8ee430d925e4730227d49f5a61eb077c3f2",
+        "bytes": 11692
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_30b_veomni.sh",
+        "sha256": "2f5a77897fdfff1b2f7a654453b1df30ae6aba0b2cd8e7040e321c235624e5ae",
+        "bytes": 4606
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_4b_fsdp.sh",
+        "sha256": "5fe291d80aeecc94d35f78ae0f2576bb80daac4cc804df18009e0109739f5a9d",
+        "bytes": 4681
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5-122b-a10b_veomni.sh",
+        "sha256": "22477c3f287c3f533e37762451d7438af25443d7ed4bc40252b3ab41b8fa747e",
+        "bytes": 5580
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_122b_a10b_megatron.sh",
+        "sha256": "45bcf4f9c5f27e03bc45877e516d631de29d4ad14814ccf154422d16cfa23877",
+        "bytes": 10918
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_27b_fsdp.sh",
+        "sha256": "df673277e13339d3be9c2490ff5093a058dc6e510550700a0e7c19bc06f7985d",
+        "bytes": 5437
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_2b_openr1_fsdp.sh",
+        "sha256": "70188a5287b4bec66ff6d861c930bf1d6764216ed3247f705c0f43587b33c0c5",
+        "bytes": 6100
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_2b_video_fsdp.sh",
+        "sha256": "2bfd63e59a629d803ac1623f7bbc5c2a10394005f6eb498ccf9e585968d4f5c2",
+        "bytes": 6180
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_35b_a3b_veomni.sh",
+        "sha256": "9a9bc8785d61d742cdf7e607b5e5dc40607515c6c5187150de95fd45bd80724e",
+        "bytes": 5271
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_35b_fsdp.sh",
+        "sha256": "0e286d18f4b3fd406d81b89881d791929379014d19b91aaa70f4a1ed5040523f",
+        "bytes": 5725
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_35b_megatron.sh",
+        "sha256": "7ed9a4e302d9dec096869917335f58baa9716bb111ebd08d9af84d1b249c1dfd",
+        "bytes": 8858
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_35b_megatron_lite.sh",
+        "sha256": "52f8b9b2b8fa22703d6c10bc4fb97332294564455932a26cdaf61d38acc2273e",
+        "bytes": 7354
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_5_397b_megatron.sh",
+        "sha256": "09c8a697c901954c665075bd85d23a76f5ef14644be4becadc514b88a42b1ed3",
+        "bytes": 10422
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "7e1ad65d361cb45c66234645497ef324bcf6976c34cba5ad21946453e800f90e",
+        "bytes": 7335
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_8b_megatron.sh",
+        "sha256": "6fdbebc9cb196597705a0aeb99b1b4eda365b382405243a9375f88aee8edc487",
+        "bytes": 3828
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_next_80b_a3b_fsdp.sh",
+        "sha256": "35ba517cf6c7e7f6215236d8b6d9a3a04e96f2a77eb9a64dd56ae6982b848028",
+        "bytes": 6685
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_235b_a22b_megatron.sh",
+        "sha256": "d9661858d85ad80043553c10248803ddc9bfcf6adcf071885baa9f66a6857cbc",
+        "bytes": 5743
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_30b_a3b_fsdp.sh",
+        "sha256": "09b43a5db9872afa4807528e6b2fb129b4937a6217d8192faef414e2bfa2b4bc",
+        "bytes": 6809
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_30b_a3b_megatron.sh",
+        "sha256": "9f1d1f931559ec3a265d6be0d1ca383726bb7ae1e29dbd22aae571ad3ad47845",
+        "bytes": 6368
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_30b_moe_veomni.sh",
+        "sha256": "808e75c00def68c828f3faf7f3d0645b5e4924bfa017afb9f9ad2905e03d538f",
+        "bytes": 5789
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_8b_fsdp.sh",
+        "sha256": "0791e97e0797bc4ecef070a2c22bbd3f1863f48079c919aa721ba3016fbd16d6",
+        "bytes": 5351
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_qwen3_vl_8b_megatron.sh",
+        "sha256": "20612715115dd6fefe960541a1564c452f70d1476d852feac78218115186fb58",
+        "bytes": 3737
+      },
+      {
+        "path": "verl/examples/grpo_trainer/run_seed_oss_36b_fsdp.sh",
+        "sha256": "2900c192c83e0e1853a60689b353896297548e52543ffed2e078e528b97a06c4",
+        "bytes": 3674
+      },
+      {
+        "path": "verl/examples/gspo_trainer/README.md",
+        "sha256": "28b1725a61ab29482dae044579463c2017ba8081398edb462e5a52e2dfa3af03",
+        "bytes": 1014
+      },
+      {
+        "path": "verl/examples/gspo_trainer/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "45cd92a6dece127b2ca3b721dd361ff589c036a424a7a61262ba1602ec75cad8",
+        "bytes": 5371
+      },
+      {
+        "path": "verl/examples/gspo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "0db583a67b105b152f2559f8b368ee3f106e27fa273fccfa96ccbfe272960cea",
+        "bytes": 6267
+      },
+      {
+        "path": "verl/examples/mtp_trainer/README.md",
+        "sha256": "c8a29a102540248f2c111b195ad1a4cdf912c9158f769f7bfb0d5011e451b7cb",
+        "bytes": 1762
+      },
+      {
+        "path": "verl/examples/mtp_trainer/run_mimo_7b_mtp_fully_async_megatron_multinode.sh",
+        "sha256": "151cc51bdbb28cebb2f2f6f2287156467a89da6a5eb8de8401a73edcdee6c55f",
+        "bytes": 7290
+      },
+      {
+        "path": "verl/examples/mtp_trainer/run_mimo_7b_mtp_megatron.sh",
+        "sha256": "3055194fb00c660020796514bdf9275e8b37c0083ab66909ded1b61ad9da7bc7",
+        "bytes": 5394
+      },
+      {
+        "path": "verl/examples/mtp_trainer/run_mimo_7b_mtp_rl_vllm_sgl_megatron.sh",
+        "sha256": "d7ac71350058d2955a6ddfcd85fcf6728461bc13753a19b2f27b6cfe4b09540e",
+        "bytes": 7452
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/README.md",
+        "sha256": "c4e903a771ae3c116de67804b8caadbd7823cc118fa9b0890964608a92432e94",
+        "bytes": 1478
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_0.6b_opd_veomni.sh",
+        "sha256": "1b90ae6d94190369870448199f40f6b833b67e1c028fad03f529c3362d430bc2",
+        "bytes": 5254
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_5_4b_fsdp.sh",
+        "sha256": "4a246d1986166e2ddb60292827d9407009b879f07e74a02750bea5aef4006ca3",
+        "bytes": 5692
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "cf9e2f8ee3b6ef9126c1db800abfd1b04186ec1ed727761cd5b3a9b0158f1830",
+        "bytes": 4565
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_8b_megatron.sh",
+        "sha256": "c3a6492309537786a97582dd8d658978c1e5448910e2f26d9e8f446a2d3df139",
+        "bytes": 4711
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_8b_mopd_fsdp.sh",
+        "sha256": "f8c15422ee0ee4cb6b7bfc60718faa74adcbc42fa508055e8722c098fadbc27f",
+        "bytes": 6081
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_8b_mopd_veomni.sh",
+        "sha256": "0237b236257c4c9a60b35e31188f864297457685bf5aad68d0e6d13391b6d943",
+        "bytes": 6176
+      },
+      {
+        "path": "verl/examples/on_policy_distillation_trainer/run_qwen3_vl_8b_fsdp.sh",
+        "sha256": "93b7c669b90ac85d82e29c9af92aa84996e344364cce588fe4828dbd4ff078f5",
+        "bytes": 4417
+      },
+      {
+        "path": "verl/examples/otb_trainer/README.md",
+        "sha256": "e93716df9c123b7c46bb217b61ff0a4de54bfdcac5f6ec4917b84db98511c16c",
+        "bytes": 613
+      },
+      {
+        "path": "verl/examples/otb_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "5edb94c434559ac1613e87c8ee600fab99f9794cdd061e6c41ef0f0947af5c82",
+        "bytes": 3617
+      },
+      {
+        "path": "verl/examples/ppo_trainer/README.md",
+        "sha256": "5e5f37b3229e7298157c6beeb569234888dacbc7fa1299abb9fc2e16f62a749c",
+        "bytes": 7230
+      },
+      {
+        "path": "verl/examples/ppo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "6923473eb21475130725e9194120c18536dea3e107b01cda9d82ba4785eed6de",
+        "bytes": 4386
+      },
+      {
+        "path": "verl/examples/ppo_trainer/run_qwen3_8b_megatron.sh",
+        "sha256": "353ef53e6edf9603562d8a35e9b28e90c358118ed46bee75b6891c11cbc1e4b4",
+        "bytes": 4190
+      },
+      {
+        "path": "verl/examples/prefix_grouper/README.md",
+        "sha256": "f2a92fb74ec2f371d80177f9785113778726c3eecd7acdd1f9c9972a739af248",
+        "bytes": 3414
+      },
+      {
+        "path": "verl/examples/prefix_grouper/run_qwen3_8b_fsdp.sh",
+        "sha256": "cf70bdb9ba2411810195c82728bb3aeab5bf89451e994f014d7fe46bb9e821da",
+        "bytes": 3553
+      },
+      {
+        "path": "verl/examples/profile/README.md",
+        "sha256": "c9638c746b1280ec65923d31a396ff9422056bc4cfe4f521ac1b172520cd1653",
+        "bytes": 1976
+      },
+      {
+        "path": "verl/examples/profile/run_qwen2_5_vl_7b_torch_memory.sh",
+        "sha256": "a7473fc3bc1ce8232e635a7d0e2dcced948812bc2eb2647143f310d56d4e244a",
+        "bytes": 4246
+      },
+      {
+        "path": "verl/examples/profile/run_qwen3_8b_npu_profile_discrete.sh",
+        "sha256": "deebf43cfb25119cd4e210899c0d978da0ad2c51602e4d039a1dc26109909a1e",
+        "bytes": 4935
+      },
+      {
+        "path": "verl/examples/profile/run_qwen3_8b_npu_profile_e2e.sh",
+        "sha256": "3ac29b1bdcc94115e7ac693aef609aba2e2daf901422e51407611eb97d60b7f7",
+        "bytes": 4768
+      },
+      {
+        "path": "verl/examples/README.md",
+        "sha256": "969bcd5066dd1ace4b108856ef1ab7e5ea4c17cc0df852a29f8ef05f078b9b34",
+        "bytes": 8182
+      },
+      {
+        "path": "verl/examples/reinforce_plus_plus_trainer/README.md",
+        "sha256": "3b1ae3cbf1f3681d32128a0cc316199f0c99a10fe63f5210baab82175486997a",
+        "bytes": 605
+      },
+      {
+        "path": "verl/examples/reinforce_plus_plus_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "57ef251aea07b19a31871d03ff1086863000b0843dec2b6febf4109b614e78b4",
+        "bytes": 3633
+      },
+      {
+        "path": "verl/examples/remax_trainer/README.md",
+        "sha256": "a15858b2d7d2a1ad16304037421ee814bffe38b12e307a49ea0854e74cf8de26",
+        "bytes": 835
+      },
+      {
+        "path": "verl/examples/remax_trainer/run_qwen2.5_math_7b_sync_fsdp.sh",
+        "sha256": "8eeb7017c986e1f91f171c8172ca2d2c42ff783c416274596210494874f58a6d",
+        "bytes": 3723
+      },
+      {
+        "path": "verl/examples/remax_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "6e79e2b016336705bd679d08f51b53f03a607d5269e4c2b81d6c221c24e09b0c",
+        "bytes": 3534
+      },
+      {
+        "path": "verl/examples/rloo_trainer/README.md",
+        "sha256": "031795d29824daeb806bada0299c6d0e669740c764f0486c9f43cf92237af1d8",
+        "bytes": 1023
+      },
+      {
+        "path": "verl/examples/rloo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "b01f89b18695f2b63186e8020878f169f33a756fdbfec82bcc0198c636ec04be",
+        "bytes": 3531
+      },
+      {
+        "path": "verl/examples/rollout_correction/run_qwen2_5_7b_fsdp.sh",
+        "sha256": "3ec342eb8e621f617db00ef1cf6927482460d9b151490e13dc597d851a3273e4",
+        "bytes": 4817
+      },
+      {
+        "path": "verl/examples/rollout_correction/run_qwen2_5_7b_fsdp_multi_rs.sh",
+        "sha256": "f78281ca38993f0ae41e2da0789123c58234c89af0a32dc3552995702c58bcb4",
+        "bytes": 4673
+      },
+      {
+        "path": "verl/examples/router_replay/README.md",
+        "sha256": "7762c908a699cff5e24f59e4ad210760dda6fcc09b5c81500570d59267bfae03",
+        "bytes": 3011
+      },
+      {
+        "path": "verl/examples/router_replay/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "828a09285c82e5ce110006937c6bbeb58a016d2e03a50734ee622dee45ced85e",
+        "bytes": 7385
+      },
+      {
+        "path": "verl/examples/router_replay/run_qwen3_5_35b_a3b_veomni.sh",
+        "sha256": "5db329ba234828109465078c7fd481c5caa12ffeed4fc8967aa673d39b3d9445",
+        "bytes": 7959
+      },
+      {
+        "path": "verl/examples/sapo_trainer/README.md",
+        "sha256": "57d43cf54527be7ed1c8fe54171d4b6c901ee2619f6471aaeb881c27ae1193eb",
+        "bytes": 804
+      },
+      {
+        "path": "verl/examples/sapo_trainer/run_qwen3_30b_a3b_fsdp.sh",
+        "sha256": "704fba656a0ffab30885aae9de46c59b98a4ed2d3c9c8961cf5852eeecda315c",
+        "bytes": 3833
+      },
+      {
+        "path": "verl/examples/sapo_trainer/run_qwen3_8b_fsdp.sh",
+        "sha256": "42e9fd6e745e55f51760dc4c2daa32035c146ea6e42275e50f27c7fbd0d41421",
+        "bytes": 4050
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_deepseek_coder_6_7b_fsdp.sh",
+        "sha256": "e221cf57fd13dd4b70ce881328bd035ba832d6cb7787c44bbcd6c5ed3f8ff450",
+        "bytes": 829
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_deepseek_v4_megatron_lite.sh",
+        "sha256": "6d39c79ec93f26d3f42dcf8ce9dd64ddc292a9a282385beb35e382f84d998f83",
+        "bytes": 5753
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_gemma_2b_fsdp.sh",
+        "sha256": "683e01ba1234b951651f17d86d2edba8c8540161b581adc7f7436aa43106a1d4",
+        "bytes": 805
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_gemma_7b_fsdp.sh",
+        "sha256": "869fc9c98c210081e732b7c19030248dc6a873e30efd79e309878c816ab4fc26",
+        "bytes": 788
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_mimo_7b_mtp_megatron.sh",
+        "sha256": "b2d1a17187b5db05654653cc46a11fc8890cab70e256a4b2f5e4b72063811447",
+        "bytes": 3257
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_nemotron_nano_v3_megatron.sh",
+        "sha256": "2a2326edd47cbe73e984d821c69d19f40741c7cc9a5e5365ee4f2b4a1b0b6292",
+        "bytes": 3600
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen2_5_0_5b_automodel.sh",
+        "sha256": "41903ede933df46dff76b9ad9bede6bf24dc845ae341d6b88f94f815b079155f",
+        "bytes": 1682
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen2_5_0_5b_fsdp.sh",
+        "sha256": "e15c852539bfcfb6fc14cc0e07ccb8686ef6b05e5a1f61601d7f55537e2fb4b7",
+        "bytes": 2278
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen3_30b_automodel.sh",
+        "sha256": "020b3d8f901d7ead00d1966bb1d6c15dbe72e9a4411278dee30d4be0a9fde8a5",
+        "bytes": 2488
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen3_5_397b_a17b_megatron.sh",
+        "sha256": "ff9aac4fda285b0668839d7d3d1f14956a68bbf56038b92101fc3914846618ce",
+        "bytes": 6161
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen3_8b_fsdp.sh",
+        "sha256": "7f19cba3de1d15cf78b11215b5c6adf0007f39288f74648e00f6e07a826905df",
+        "bytes": 2007
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_qwen_megatron_fsdp.sh",
+        "sha256": "cdbb53906d8b89eb1e2b30b56b846179f012aed0601cd3b1c487c122a04021c8",
+        "bytes": 2013
+      },
+      {
+        "path": "verl/examples/sft/gsm8k/run_seed_oss_36b_fsdp.sh",
+        "sha256": "38eb2b533e33315043ef7bca419e287055df14f65c2683d76a56e410066a3f14",
+        "bytes": 842
+      },
+      {
+        "path": "verl/examples/sft/multiturn/run_qwen2_5_0_5b_fsdp.sh",
+        "sha256": "6eda5e2a1a1fcd21e7df0b42912ed4441f40f447a67cba29047a5e0a4bb03657",
+        "bytes": 1389
+      },
+      {
+        "path": "verl/examples/sft/vlm/run_qwen3_vl_2b_fsdp.sh",
+        "sha256": "f3544aef55927a1b841962647df6700c67dc18aaaadfd1e473c8b3e9ede2f0ac",
+        "bytes": 2985
+      },
+      {
+        "path": "verl/examples/tutorial/agent_loop_get_started/agent_loop_tutorial.ipynb",
+        "sha256": "af26150a1239fcd8b6d0a23171ed85407bd78d0bdbdf2d48d1c528bf897f698d",
+        "bytes": 46384
+      },
+      {
+        "path": "verl/examples/tutorial/agent_loop_get_started/sandbox.py",
+        "sha256": "f47329c451096ee06d715595a99124f058be8f6d22c8ca4fc2e19dd5effb79a9",
+        "bytes": 2767
+      },
+      {
+        "path": "verl/examples/tutorial/ray/tutorial.ipynb",
+        "sha256": "25f8d99bfb958df3ee435f210f3aa859654b8126ea96ecfae68f38cccfe295d5",
+        "bytes": 31467
+      },
+      {
+        "path": "verl/examples/tutorial/README.md",
+        "sha256": "2d16dfc887c41e39c6104fc9dd57ff566923a672cc34909fdaf3e55287a5fb01",
+        "bytes": 937
+      },
+      {
+        "path": "verl/examples/tutorial/skypilot/README.md",
+        "sha256": "5d357ee84f5615e00dc016fd7cec634b369124eed1485cff9dab0c424293a39a",
+        "bytes": 3044
+      },
+      {
+        "path": "verl/examples/tutorial/skypilot/verl-grpo.yaml",
+        "sha256": "c111c2ae363918120457b21cf0b137468ba3a3d324b14dd02f4d0ed8e86cdc3a",
+        "bytes": 3576
+      },
+      {
+        "path": "verl/examples/tutorial/skypilot/verl-multiturn-tools.yaml",
+        "sha256": "b8b4537b57054032d5449e71cc6cb50aac3dee4a0ef25359b9b89a52da61a7cd",
+        "bytes": 3664
+      },
+      {
+        "path": "verl/examples/tutorial/skypilot/verl-ppo.yaml",
+        "sha256": "2a36dcb83470faa2a071469adf2dd0c201c5893ddaf49ce1bc485ec547e9eb0c",
+        "bytes": 3821
+      },
+      {
+        "path": "verl/examples/tutorial/slurm/ray_on_slurm.slurm",
+        "sha256": "1fe52b4ed66f26e9ba3a9989e5154f62ecd0c76481f31733a19a41d3a2870720",
+        "bytes": 3430
+      },
+      {
+        "path": "verl/AGENTS.md",
+        "sha256": "5fdec7a5182a29335088b200caf43c59a8fb5226de228915126a54bfbaa8739f"
+      },
+      {
+        "path": "verl/docs/contributing/editing-agent-instructions.md",
+        "sha256": "a0baf5ed2d21e7f6ccb7b1386d60a7b88d1c254fe03576664033ac2bd74887de"
+      },
+      {
+        "path": "verl/examples/tuning/README.md",
+        "sha256": "3656aa9d841f4cc5d2e378f0de3ccee058193bc635ec216e5623c14be5a5324e"
+      },
+      {
+        "path": "verl/examples/tuning/lora/run_qwen2_5_vl_7b_fsdp.sh",
+        "sha256": "8baf348aff934754a3da910182af1709daabf2815102fa130196edbc69f767b1"
+      },
+      {
+        "path": "verl/examples/tuning/lora/run_qwen3_30b_a3b_megatron.sh",
+        "sha256": "6dbb4d1abadc25670ae9e37192fa57b7b2355adbc4e162969d8ea7f6e736fc0e"
+      },
+      {
+        "path": "verl/examples/tuning/lora/run_qwen3_8b_from_adapter_fsdp.sh",
+        "sha256": "3d627b6dfa9fb6d3490d41b6ed1ff662355b7a0424c3ae00e73a33817d666015"
+      },
+      {
+        "path": "verl/examples/tuning/lora/run_qwen3_8b_fsdp.sh",
+        "sha256": "f1235b8b005eafbbfda6c5e0a9774b5ad886f533eac7aae58896571d265bbf65"
+      },
+      {
+        "path": "verl/examples/tuning/lora/run_qwen3_8b_merge_fsdp.sh",
+        "sha256": "ee3fe3712e5f0b1a908eb8c39d0c855f45f44ac9005a6ad10e42beabad2b5efa"
+      },
+      {
+        "path": "verl/examples/tuning/scaling/run_qwen2_5_32b_megatron.sh",
+        "sha256": "89b74aa5c02c30f3a7d7f2c2b8fc02fec2d20af61c9811cf73ccf4606f4a9e81"
+      },
+      {
+        "path": "verl/examples/tuning/scaling/run_qwen2_5_72b_fsdp.sh",
+        "sha256": "1aad04caa192ba3eabffd4422fbb55664f1453f3160ca5d2de1b14a005b0cb92"
+      }
+    ]
+  }
 }
