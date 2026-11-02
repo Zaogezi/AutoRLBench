@@ -19,7 +19,7 @@ algo = "GRPO"
 script = "scripts/train.sh"
 
 [environment]
-image = "verl_checkpoint_host_memory_oom"
+image = "verl_checkpoint_host_memory_oom_clean_workspace"
 
 [environment.env]
 NVIDIA_VISIBLE_DEVICES = "all"

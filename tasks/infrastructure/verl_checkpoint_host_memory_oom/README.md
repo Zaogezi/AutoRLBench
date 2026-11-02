@@ -12,7 +12,7 @@ checkpoint writer stages tensor data for disk at step 10.
 | **Model** | Qwen/Qwen2.5-0.5B-Instruct |
 | **Dataset** | openai/gsm8k main; all 7473 train rows, all 1319 official test rows for held-out validation |
 | **Framework** | verl 0.3.0.post1, FSDP, `scripts/train.sh` |
-| **Environment** | `verl_checkpoint_host_memory_oom` · 1 × A800 80 GB GPU · 20 GiB container RAM |
+| **Environment** | `verl_checkpoint_host_memory_oom_clean_workspace` · 1 × A800 80 GB GPU · 20 GiB container RAM |
 | **Evaluations** | issue · solution |
 | **Recorded runs** | 1 defective + 1 repaired run, 10-step budget; save at step 10 |
 
@@ -72,3 +72,46 @@ report records the original defective and repaired runs.
 The solution verifier drives training and restoration itself, so no separate
 `run_spec.json` is needed. The agent repairs the workspace and submits
 `report.md` without launching training.
+
+## Packaging maintenance
+
+The clean-workspace image uses the same digest-pinned dependency stack as the
+recorded run, clearing only the base image's unrelated `/workspace` contents
+before the task is uploaded. This removes absolute example symlinks that Harbor
+cannot safely archive. The original image recipe is retained unchanged.
+Image build and archive checks are recorded separately from training validation;
+the clean image was built in the 2026-10-31 packaging review; this does not establish fresh solution-training correctness.
+
+## Review and execution guide
+
+Scope: **issue and solution**. Run package validation from the repository root:
+
+```bash
+python -m autorlbench validate tasks/infrastructure/verl_checkpoint_host_memory_oom
+```
+
+Evidence entry points: `workspace/logs/{worker_events,checkpoint_events,host_memory,metrics}.jsonl`, `workspace/logs/{training.stderr.log,raylet.out,final_memory_events.txt}`, and `workspace/configs/experiment.yaml`. The symptom, mechanism and counterfactual
+comparison are explained above; raw logs remain the source of truth. Historical
+comparisons establish the documented case, not a guarantee over new seeds.
+
+The task README, task card, issue oracle, solution oracle/reference patches and
+verifier resources are reviewer material. Agents receive the level-specific
+`instruction.md` and staged `workspace/`; do not place the reviewer README or
+oracle in the workspace. Issue instructions use the common diagnosis scaffold.
+Solution instructions describe the fixed workload, deliverables and acceptance
+contract without specifying a repair. Upstream contribution policies and unrelated
+utilities are excluded; the hidden round-two workspace audit records removals.
+Production modules and frozen evidence are retained for diagnosis and import
+compatibility; this is not a file-by-file minimal dependency extraction.
+
+### Resource budget
+
+One A800 80 GB, 20 GiB host RAM. The verifier allows 1200 seconds for each of fresh training and fresh-process restore/validation: **at most 0.67 GPU-hours across those two commands**, plus container setup and artifact checks. No fresh runtime estimate is claimed. Checkpoint contents and the 10-step workload are unchanged.
+
+### Offline review, 2026-11-01
+
+This review runs package validation, evidence/hash checks and applicable CPU
+checks only. It does not run a model agent, hosted judge, GPU training, prepare
+downloads, or checkpoint deserialization. GPU figures above are historical
+measurements or configured timeout bounds; they are not measurements from this
+review. Fresh end-to-end solution correctness remains unverified this round.
