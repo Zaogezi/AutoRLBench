@@ -4,6 +4,8 @@
   "env": {
     "LOG_DIR": "$AUTORLBENCH_RESULTS/experiment_logs"
   },
-  "timeout_s": 14400,
-  "log_roots": ["experiment_logs"]
+  "timeout_s": 7200,
+  "log_roots": [
+    "experiment_logs"
+  ]
 }

@@ -35,7 +35,7 @@ A missing or empty `/workspace/report.md` scores 0.
 
 After you submit the report, the system deletes everything under
 `$AUTORLBENCH_RESULTS/experiment_logs`, then re-runs the experiment in your
-repaired workspace as a foreground process:
+repaired workspace as a foreground process with a 7200-second training timeout:
 
 ```bash
 bash run_grpo_lora.sh data.train_files=$PWD/data/gsm8k/train.parquet data.val_files=$PWD/data/gsm8k/test.parquet data.train_batch_size=128 data.max_response_length=1024 actor_rollout_ref.model.path=$PWD/models/Qwen2.5-1.5B-Instruct actor_rollout_ref.model.lora_rank=32 actor_rollout_ref.model.lora_alpha=64 actor_rollout_ref.model.lora.merge=True actor_rollout_ref.actor.strategy=fsdp2 actor_rollout_ref.rollout.n=8 actor_rollout_ref.rollout.val_kwargs.do_sample=False actor_rollout_ref.rollout.val_kwargs.n=1 reward.custom_reward_function.path=null trainer.n_gpus_per_node=1 trainer.total_training_steps=60 trainer.test_freq=5 trainer.val_before_train=True trainer.validation_data_dir=$LOG_DIR/val_generations
@@ -63,7 +63,6 @@ under `experiment_logs/wandb`, and validation generations under
 **only this fresh run's** files under `$AUTORLBENCH_RESULTS/experiment_logs`
 and scores the key metrics; logs written anywhere else are ignored. Keep the
 model, data, reward function and its scorer, LoRA configuration, batch sizes,
-training budget and evaluation schedule unchanged, and do not turn off LoRA
-merging or FSDP2 to avoid an implementation defect. Do not copy, edit, or
+training budget and evaluation schedule unchanged, and preserve the effective run settings listed above. Do not copy, edit, or
 fabricate metrics or replay frozen historical logs as a new run. Otherwise the
 run is scored 0. Leave the frozen evidence under `outputs/` intact.

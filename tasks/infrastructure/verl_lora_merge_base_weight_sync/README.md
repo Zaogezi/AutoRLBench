@@ -44,3 +44,46 @@ Two extra probe runs (`evaluations/issue/reference/weight-sync-probe.md`) record
   generations must agree with it within 0.002. Margins: 0.316 above the defective arm's
   step 60 (0.309 above its highest point, 0.091), 0.377 below the repaired arm's step 60,
   and 0.319 above the repaired arm's step 0. Calibrated on 2 runs per side.
+
+## Workspace packaging
+
+The snapshot omits upstream CI configuration, container recipes, regression
+test suites and examples outside data preprocessing and tuning. Production
+modules, launch scripts, source metadata, licenses and frozen evidence are
+retained unchanged. `environment/source_manifest.json` records each omitted
+file and its original checksum. This packaging change does not repair the
+training defect or change any metric.
+
+## Review and execution guide
+
+Scope: **issue and solution**. Run package validation from the repository root:
+
+```bash
+python -m autorlbench validate tasks/infrastructure/verl_lora_merge_base_weight_sync
+```
+
+Evidence entry points: `workspace/outputs/{train.log,wandb-history.jsonl}`, `workspace/outputs/val_generations/{0,60}.jsonl`, and `workspace/run_grpo_lora.sh`. Reviewer-only probes are under `evaluations/issue/reference/`. The symptom, mechanism and counterfactual
+comparison are explained above; raw logs remain the source of truth. Historical
+comparisons establish the documented case, not a guarantee over new seeds.
+
+The task README, task card, issue oracle, solution oracle/reference patches and
+verifier resources are reviewer material. Agents receive the level-specific
+`instruction.md` and staged `workspace/`; do not place the reviewer README or
+oracle in the workspace. Issue instructions use the common diagnosis scaffold.
+Solution instructions describe the fixed workload, deliverables and acceptance
+contract without specifying a repair. Upstream contribution policies and unrelated
+utilities are excluded; the hidden round-two workspace audit records removals.
+Production modules and frozen evidence are retained for diagnosis and import
+compatibility; this is not a file-by-file minimal dependency extraction.
+
+### Resource budget
+
+One GPU, 60 steps. The recorded one-GPU run took about 50 minutes (**0.83 GPU-hours**); this is historical evidence, not a new timing measurement. The training timeout is now 7200 seconds (**2 GPU-hours maximum for the rerun**), reduced from 14400. Full held-out evaluation and the 60-step acceptance threshold are unchanged.
+
+### Offline review, 2026-11-01
+
+This review runs package validation, evidence/hash checks and applicable CPU
+checks only. It does not run a model agent, hosted judge, GPU training, prepare
+downloads, or checkpoint deserialization. GPU figures above are historical
+measurements or configured timeout bounds; they are not measurements from this
+review. Fresh end-to-end solution correctness remains unverified this round.
